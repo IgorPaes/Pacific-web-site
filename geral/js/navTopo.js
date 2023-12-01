@@ -1,4 +1,4 @@
-function navegacao(selecionado) {
+export function navegacao(selecionado) {
     const itensNav = document.querySelectorAll('.top_nav button');
     switch(selecionado) {
         case 1:
