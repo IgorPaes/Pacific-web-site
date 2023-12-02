@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../css/inicial.css">
     <link rel="stylesheet" href="../../geral/css/style.css">
 
-    <script src="../../geral/js/navTopo.js" defer></script>
+    <script src="../../geral/js/navSuperior.js" defer></script>
     <script src="../js/inicial.js" defer></script>
 </head>
 <body>
@@ -46,7 +46,23 @@
             </div>
             <div class="header_bar"></div>
             <div class="language_bar">
-                <div>123</div>
+                <div class="bloco_select" id="bloco_drop">
+                    <div class="icone_txt_select" id="ti_select">
+                        <img src="../../public/China.png" alt="Brasil">
+                        <span>PT-BR</span>
+                    </div>
+                    <div class="icon_box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
+                            <path d="M1 7.78094L6.28 1.78679L12 7.78094" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="itens_select" id="lista_select">
+                    <li class="selecionado">Todos</li>
+                    <li>Últimos 7 dias</li>
+                    <li>Últimos 30 dias</li>
+                    <li>Últimos 365 dias</li>
+                </div>
             </div>
         </header>
         <main class="main_container">
