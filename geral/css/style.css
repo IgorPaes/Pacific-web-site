@@ -1,9 +1,9 @@
 :root {
-    --cor-branco-padrao: rgb(255, 255, 255);
+    --cor-branca-padrao: rgb(255, 255, 255);
     --cor-azul-padrao: #3131D0;
     --cor-azul-claro: #2424AC;
-    --cor-azul-escuro: #181881;
     --cor-azul-claro-25: rgba(49, 49, 208, .25);
+    --cor-azul-escuro: #181881;
 
     --tempo-transicao-padrao: .45s;
 }
@@ -57,14 +57,14 @@ button, a {
     width: 100%;
     height: 100vh;
     position: relative;
-    color: var(--cor-branco-padrao);
+    color: var(--cor-branca-padrao);
 
 }
 
 .main_container {
 
     width: 100%;
-    height: 100%;
+    min-height: 50%;
     background-color: #181881;
 
 }
@@ -129,7 +129,7 @@ button, a {
     font-size: 1.25rem;
     color: var(--cor-azul-padrao);
     text-align: center;
-    background-color: var(--cor-branco-padrao);
+    background-color: var(--cor-branca-padrao);
     border-radius: .5rem;
     box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.25);
     transition: letter-spacing var(--tempo-transicao-padrao);
@@ -154,17 +154,15 @@ button, a {
     font-size: 1.25rem;
     font-weight: 900;
     letter-spacing: .0625rem;
-    
 }
 
 .header_container .header_bar {
 
     width: 100%;
     height: 2px;
-    background-color: var(--cor-branco-padrao);
+    background-color: var(--cor-branca-padrao);
 
 }
-
 
 /* --- NAV --- */
 
@@ -179,7 +177,7 @@ button, a {
 
 }
 
-.language_bar .bloco_select {
+.language_bar .select_block {
 
     display: flex;
     align-items: flex-end;
@@ -188,7 +186,7 @@ button, a {
 
 }
 
-.language_bar .bloco_select .icon_box {
+.language_bar .select_block .icon_box {
 
     display: flex;
     align-items: center;
@@ -200,13 +198,13 @@ button, a {
 
 }
 
-.language_bar .bloco_select .icon_box svg {
+.language_bar .select_block .icon_box svg {
 
     transition: var(--tempo-transicao-padrao);
 
 }
 
-.language_bar .bloco_select .icon_box .ativo {
+.language_bar .select_block .icon_box .ativo {
 
     transform: rotate(180deg);
 
@@ -236,13 +234,13 @@ button, a {
     font-size: 1.25rem;
     font-weight: 500;
     letter-spacing: .025rem;
-    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.25);
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, .25);
     min-width: 64px;
     text-align: center;
 
 }
 
-.language_bar .itens_select {
+.language_bar .select_itens {
 
     display: none;
     flex-direction: column;
@@ -256,7 +254,7 @@ button, a {
 
 }
 
-.language_bar .itens_select > li {
+.language_bar .select_itens > li {
 
     display: flex;
     gap: 5px;
@@ -267,7 +265,7 @@ button, a {
 
 }
 
-.language_bar .itens_select > li span {
+.language_bar .select_itens > li span {
 
     width: 4rem;
     font-size: 1.25rem;
@@ -280,6 +278,80 @@ button, a {
 
 /* -------------------- FOOTER -------------------- */
 
+.footer_container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.38rem;
+    padding: 3.75rem 0 2.5rem 0;
+    border-radius: 50px 50px 0px 0px;
+    box-shadow: 0px -22px 91px 0px rgba(0, 0, 0, .25);
+    background: var(--cor-branca-padrao);
+    margin-top: -50px;
+
+}
+
+.footer_container .circles_box {
+
+    display: flex;
+    gap: 1.56rem;
+
+}
+
+.footer_container .circles_box > .circle {
+
+    width: 2.375rem;
+    height: 2.375rem;
+    border-radius: 50%;
+    background: var(--cor-azul-padrao);
+    cursor: pointer;
+
+}
+
+.footer_container .footer_nav {
+
+    display: flex;
+    gap: 1.75rem;
+
+}
+
+.footer_container .footer_nav button {
+
+    color: var(--cor-azul-claro-25);
+    color: rgba(49, 49, 208, 0.25);
+    font-size: 1.5625rem;
+    font-weight: 400;
+    letter-spacing: .15625rem;
+    text-align: center;
+
+}
+
+.footer_container .footer_nav .selecionado {
+
+    color: var(--cor-azul-padrao);
+    font-weight: 700;
+    transition: .15s;
+
+}
+
+.footer_container .footer_nav .selecionado .txt_underline {
+
+    width: 70%;
+    height: 3px;
+    background-color: var(--cor-azul-padrao);
+
+}
+
+.footer_container .est_txt span {
+
+    color: var(--cor-azul-padrao);
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: .375rem;
+
+}
 
 
 /* ------------------------------------------------ */

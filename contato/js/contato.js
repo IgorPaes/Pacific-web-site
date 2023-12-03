@@ -1,3 +1,3 @@
-import paginaSelecionada from '../../geral/js/navSuperior.js';
+import navegacoes from '../../geral/js/navSuperior.js';
 
-paginaSelecionada();
+navegacoes(4);

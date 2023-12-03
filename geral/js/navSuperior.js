@@ -1,17 +1,28 @@
-export default function paginaSelecionada(selecionado) {
-    const itensNav = document.querySelectorAll('#nav_sup button');
+export default function navegacoes(selecionado) {
+    const buttonsNavSup = document.querySelectorAll('#nav_sup button');
+    const buttonsNavInf = document.querySelectorAll('#ft_nav button');
     switch(selecionado) {
         case 1:
-            itensNav[0].classList.add('selecionado');
-            itensNav[0].insertAdjacentHTML('afterbegin', iconeLogo());
+            buttonsNavSup[0].classList.add('selecionado');
+            buttonsNavSup[0].insertAdjacentHTML('afterbegin', iconeLogo());
+            buttonsNavInf[0].classList.add('selecionado');
+            buttonsNavInf[0].insertAdjacentHTML('beforeend', underline());
         break;
         case 2:
-            itensNav[1].classList.add('selecionado');
-            itensNav[1].insertAdjacentHTML('afterbegin', iconeLogo());
+            buttonsNavSup[1].classList.add('selecionado');
+            buttonsNavSup[1].insertAdjacentHTML('afterbegin', iconeLogo());
+            buttonsNavInf[1].classList.add('selecionado');
+            buttonsNavInf[1].insertAdjacentHTML('beforeend', underline());
         break;
         case 3:
-            itensNav[2].classList.add('selecionado');
-            itensNav[2].insertAdjacentHTML('afterbegin', iconeLogo());
+            buttonsNavSup[2].classList.add('selecionado');
+            buttonsNavSup[2].insertAdjacentHTML('afterbegin', iconeLogo());
+            buttonsNavInf[2].classList.add('selecionado');
+            buttonsNavInf[2].insertAdjacentHTML('beforeend', underline());
+        break;
+        case 4:
+            buttonsNavInf[3].classList.add('selecionado');
+            buttonsNavInf[3].insertAdjacentHTML('beforeend', underline());
         break;
     }
     function iconeLogo() {
@@ -22,30 +33,35 @@ export default function paginaSelecionada(selecionado) {
             </svg>    
         `
     }
+    function underline() {
+        return `
+            <div class="txt_underline"></div>
+        `
+    }
 }
 
 let primeiroClick = true;
-document.getElementById("bloco_drop").addEventListener('click', () => {
+document.getElementById("drop_block").addEventListener('click', () => {
     document.querySelector('#icon_box_id svg').classList.toggle('ativo');
-    const listaSelect = document.getElementById('lista_select');
+    const listaSelect = document.getElementById('select_list');
     listaSelect.style.display = (listaSelect.style.display === 'flex') ? 'none' : 'flex';
     if(primeiroClick) {
         primeiroClick = false;
-        const options = listaSelect.querySelectorAll('#lista_select li');
-        options.forEach((option) => {        
-            option.addEventListener('click', () => {
+        const opcoes = listaSelect.querySelectorAll('#select_list li');
+        opcoes.forEach((opcao) => {        
+            opcao.addEventListener('click', () => {
                 const salvaImgPrincipal = document.querySelector('#ti_select img').getAttribute("src");
                 const salvaTxtPrincipal = document.querySelector('#ti_select span').textContent;
-
-                const ultImg = option.querySelector('img');
-                const ultTxt = option.querySelector('span');
-
+                const ultImg = opcao.querySelector('img');
+                const ultTxt = opcao.querySelector('span');
+                
                 document.querySelector('#ti_select img').setAttribute("src", ultImg.getAttribute("src"));
                 document.querySelector('#ti_select span').textContent = ultTxt.textContent;
+                
+                armazenarEscolha(ultTxt.textContent);
 
                 ultImg.setAttribute("src", salvaImgPrincipal);
                 ultTxt.textContent = salvaTxtPrincipal;
-                
                 listaSelect.style.display = 'none';
             });
         });
@@ -56,3 +72,8 @@ document.getElementById("bloco_drop").addEventListener('click', () => {
         });
     }
 });
+
+function armazenarEscolha(txtOpcaoEscolhida) {
+    localStorage.setItem('language', txtOpcaoEscolhida);
+    
+}
