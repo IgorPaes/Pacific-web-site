@@ -16,29 +16,27 @@ function navegacao(selecionado) {
     `
 }
 
-let primeiraVez = true;
+let primeiroClick = true;
 document.getElementById("bloco_drop").addEventListener('click', () => {
     document.querySelector('#icon_box_id svg').classList.toggle('ativo');
     const listaSelect = document.getElementById('lista_select');
     listaSelect.style.display = (listaSelect.style.display === 'flex') ? 'none' : 'flex';
-    if(primeiraVez) {
-        primeiraVez = false;
+    if(primeiroClick) {
+        primeiroClick = false;
         const options = listaSelect.querySelectorAll('#lista_select li');
         options.forEach((option) => {        
-            option.addEventListener('click', () => {      
-  
-                // ARRUMAR INVERSÃO DE BANDEIRAS
-                // const imgPrincipal = document.querySelector('#ti_select img');
-                // const txtPrincipal = document.querySelector('#ti_select span').textContent;
+            option.addEventListener('click', () => {
+                const salvaImgPrincipal = document.querySelector('#ti_select img').getAttribute("src");
+                const salvaTxtPrincipal = document.querySelector('#ti_select span').textContent;
 
-                // const ultImg = option.querySelector('img');
-                // const ultTxt = option.querySelector('span').textContent;
-                
-                // imgPrincipal.setAttribute("src", ultImg.getAttribute("src"));
-                // txtPrincipal = ultTxt;
+                const ultImg = option.querySelector('img');
+                const ultTxt = option.querySelector('span');
 
-                // ultImg.setAttribute("src", imgPrincipal.getAttribute("src"));
-                // ultTxt = txtPrincipal;
+                document.querySelector('#ti_select img').setAttribute("src", ultImg.getAttribute("src"));
+                document.querySelector('#ti_select span').textContent = ultTxt.textContent;
+
+                ultImg.setAttribute("src", salvaImgPrincipal);
+                ultTxt.textContent = salvaTxtPrincipal;
                 
                 listaSelect.style.display = 'none';
             });
