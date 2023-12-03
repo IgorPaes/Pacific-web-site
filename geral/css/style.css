@@ -149,6 +149,14 @@ button, a {
 
 }
 
+.header_container .top_nav .selecionado span {
+
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: .0625rem;
+    
+}
+
 .header_container .header_bar {
 
     width: 100%;
