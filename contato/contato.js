@@ -1,3 +1,2 @@
-import navegacoes from '../geral/js/navSuperior.js';
-
+import navegacoes from '../geral/js/navegacoes.js';
 navegacoes(4);
