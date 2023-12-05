@@ -124,15 +124,9 @@
     border-radius: 3.125rem;
     box-shadow: 0px 3px 100px 0px rgba(0, 0, 0, .45);
     padding: 7rem;
-    z-index: 500;
-    margin-top: -50px;
-    z-index: 101;
-
-}
-
-.general_informations_block .main_informations, .general_informations_block .informations_balloons {
-
-    width: 50%;
+    padding: 7rem 5.85%;
+    /* margin-top: -50px; */
+    margin-top: -700px;
 
 }
 
@@ -142,6 +136,7 @@
     color: var(--cor-azul-padrao);
     font-weight: 800;
     letter-spacing: .25rem;
+    margin-bottom: 12px;
 
 }
 
@@ -152,6 +147,7 @@
     font-weight: 600;
     letter-spacing: .03125rem;
     max-width: 48.75rem;
+    margin-bottom: 30px;
 
 }
 
@@ -164,7 +160,92 @@
     width: 100%;
     border-radius: 100px;
     background-color: var(--cor-azul-padrao);
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: .15625rem;
 
+}
+
+.general_informations_block .main_informations button:hover {
+
+    letter-spacing: .32rem;
+
+}
+
+.general_informations_block .main_informations, .general_informations_block .informations_balloons {
+
+    width: 50%;
+
+}
+
+.general_informations_block .informations_balloons {
+
+    display: grid;
+    gap: 15px;
+
+}
+
+.general_informations_block .info_balloon {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    height: 33.33%;
+    border-radius: 2.4375rem;
+    background-color: #F6F6F6;
+
+}
+
+.general_informations_block .info_balloon:nth-child(2) {
+
+    background-color: var(--cor-azul-padrao);
+    gap: 1.81rem;
+
+}
+
+.general_informations_block .info_balloon {
+
+    width: 100%;
+    height: 100%;
+    border-radius: 2.4375rem;
+    background-color: #F6F6F6;
+
+}
+
+.general_informations_block .info_balloon .ident_circle {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-branca-padrao);
+    text-align: center;
+    font-size: 2.1875rem;
+    letter-spacing: .10938rem;
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 6.25rem;
+    background: var(--cor-azul-padrao);
+
+}
+
+.general_informations_block .info_balloon p {
+
+    font-size: 1.5625rem;
+    color: var(--cor-azul-padrao);
+    font-weight: 600;
+    letter-spacing: .07813rem;
+    max-width: 36.375rem;
+
+}
+
+.general_informations_block .info_balloon:nth-child(2) p {
+
+    font-size: 1.375rem;
+    font-weight: 500; 
+    letter-spacing: .06875rem;
+    color: var(--cor-branca-padrao);
 
 }
 
