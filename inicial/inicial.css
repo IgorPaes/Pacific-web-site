@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;700;800&display=swap');
 
-.home_page .main_container {
+#home_page .initial_box {
 
-    height: 116.6vh !important;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
 
 }
 
-.main_background {
+.background_filter {
     
     width: 100%;
-    height: 100%; 
+    height: 100%;
     background-color: rgba(49, 49, 208, .85);
     overflow: hidden;
 
@@ -23,7 +26,7 @@
     pointer-events: none;
     width: 100%;
     height: 100%;
-    background-size: contain;
+    background-size: 100% 100%;
     z-index: -1;
 
 }
@@ -31,7 +34,7 @@
 .image_blur {
 
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     background-color: rgba(13, 24, 44, .01);
     backdrop-filter: blur(2.5px);
     z-index: 12;
@@ -43,7 +46,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    height: 146%;
+    height: 140%;
     position: absolute;
     top: -200px;
     left: 175px;
@@ -61,21 +64,21 @@
 
 .image_ligths .light_strip:nth-child(1) {
 
-    width: 35.15rem;
+    width: 40.5rem;
     margin-right: 32px;
 
 }
 
 .image_ligths .light_strip:nth-child(2) {
 
-    width: 35.5rem;
+    width: 32rem;
     margin-right: 40px;
 
 }
 
 .image_ligths .light_strip:nth-child(3) {
 
-    min-width: 22.5rem;
+    min-width: 20em;
     margin-right: 48px;
 
 }
@@ -86,7 +89,7 @@
 
 }
 
-.general_informations {
+.main_title {
 
     display: flex;
     align-items: center;
@@ -96,7 +99,7 @@
     
 }
 
-.general_informations h1 {
+.main_title h1 {
 
     font-size: 3rem;
     font-family: Montserrat Alternates;
@@ -106,10 +109,63 @@
     
 }
 
-.general_informations h1 span {
+.main_title h1 span {
 
     font-weight: 700;
     
+}
+
+.general_informations_block {
+
+    display: flex;
+    gap: 8.7rem;
+    width: 100%;
+    background-color: var(--cor-branca-padrao);
+    border-radius: 3.125rem;
+    box-shadow: 0px 3px 100px 0px rgba(0, 0, 0, .45);
+    padding: 7rem;
+    z-index: 500;
+    margin-top: -50px;
+    z-index: 101;
+
+}
+
+.general_informations_block .main_informations, .general_informations_block .informations_balloons {
+
+    width: 50%;
+
+}
+
+.general_informations_block .main_informations h2 {
+
+    font-size: 5rem;
+    color: var(--cor-azul-padrao);
+    font-weight: 800;
+    letter-spacing: .25rem;
+
+}
+
+.general_informations_block .main_informations p {
+
+    color: var(--cor-azul-padrao);
+    font-size: 1.5625rem;
+    font-weight: 600;
+    letter-spacing: .03125rem;
+    max-width: 48.75rem;
+
+}
+
+.general_informations_block .main_informations button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .88rem 0;
+    width: 100%;
+    border-radius: 100px;
+    background-color: var(--cor-azul-padrao);
+
+
 }
 
 /* ------------------------------------------------ */
