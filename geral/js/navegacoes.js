@@ -1,4 +1,9 @@
 export default function navegacoes(selecionado) {
+    const blockNavSuperior = document.querySelector('.header_container');
+    const blockNavInferiro = document.querySelector('.footer_container');
+    blockNavSuperior.innerHTML = navSuperior();
+    blockNavInferiro.innerHTML = navInferior();
+    
     const buttonsNavSup = document.querySelectorAll('#nav_sup button');
     const buttonsNavInf = document.querySelectorAll('#ft_nav button');
     switch(selecionado) {
@@ -38,35 +43,123 @@ export default function navegacoes(selecionado) {
             <div class="txt_underline"></div>
         `
     }
+    carregaDrop();
 }
 
-let primeiroClick = true;
-document.getElementById("drop_block").addEventListener('click', () => {
-    document.querySelector('#icon_box_id svg').classList.toggle('ativo');
-    const listaSelect = document.getElementById('select_list');
-    listaSelect.style.display = (listaSelect.style.display === 'flex') ? 'none' : 'flex';
-    if(primeiroClick) {
-        primeiroClick = false;
-        const opcoes = listaSelect.querySelectorAll('#select_list li');
-        opcoes.forEach((opcao) => {        
-            opcao.addEventListener('click', () => {
-                const salvaImgPrincipal = document.querySelector('#ti_select img').getAttribute("src");
-                const salvaTxtPrincipal = document.querySelector('#ti_select span').textContent;
-                const ultImg = opcao.querySelector('img');
-                const ultTxt = opcao.querySelector('span');
+function carregaDrop() {
+    let primeiroClick = true;
+    document.getElementById("drop_block").addEventListener('click', () => {
+        document.querySelector('#icon_box_id svg').classList.toggle('ativo');
+        const listaSelect = document.getElementById('select_list');
+        listaSelect.style.display = (listaSelect.style.display === 'flex') ? 'none' : 'flex';
+        if(primeiroClick) {
+            primeiroClick = false;
+            const opcoes = listaSelect.querySelectorAll('#select_list li');
+            opcoes.forEach((opcao) => {        
+                opcao.addEventListener('click', () => {
+                    const salvaImgPrincipal = document.querySelector('#ti_select img').getAttribute("src");
+                    const salvaTxtPrincipal = document.querySelector('#ti_select span').textContent;
+                    const ultImg = opcao.querySelector('img');
+                    const ultTxt = opcao.querySelector('span');
+                    
+                    document.querySelector('#ti_select img').setAttribute("src", ultImg.getAttribute("src"));
+                    document.querySelector('#ti_select span').textContent = ultTxt.textContent;
+                    ultImg.setAttribute("src", salvaImgPrincipal);
+                    ultTxt.textContent = salvaTxtPrincipal;
                 
-                document.querySelector('#ti_select img').setAttribute("src", ultImg.getAttribute("src"));
-                document.querySelector('#ti_select span').textContent = ultTxt.textContent;
-                ultImg.setAttribute("src", salvaImgPrincipal);
-                ultTxt.textContent = salvaTxtPrincipal;
-            
-                listaSelect.style.display = 'none';
+                    listaSelect.style.display = 'none';
+                });
             });
-        });
-        document.addEventListener('click', (event) => {
-            if(event.target.classList[0] === 'main_container') {
-                listaSelect.style.display = 'none';
-            }
-        });
-    }
-});
+            document.addEventListener('click', (event) => {
+                if(event.target.classList[0] === 'main_container') {
+                    listaSelect.style.display = 'none';
+                }
+            });
+        }
+    });
+}
+
+function navSuperior() {
+    return `
+        <div class="top_header_box">
+            <figure>
+                <img src="../geral/assets/Logo Mono Black.png">
+            </figure>
+            <nav class="top_nav" id="nav_sup">
+                <a href="../inicial/inicial.html">
+                    <button>
+                        <span>Inicio</span>
+                    </button>
+                </a>
+                <a href="../produtos/produtos.html">
+                    <button>
+                        <span>Produtos</span>
+                    </button>
+                </a>
+                <a href="../sobre/sobre.html">
+                    <button>
+                        <span>Sobre Nós</span>
+                    </button>
+                </a>
+                <a href="../contato/contato.html" target="_blank">
+                    <button class="contact" id="tContato">CONTATO</button>
+                </a>
+            </nav>
+        </div>
+        <div class="header_bar"></div>
+        <div class="language_bar">
+            <div class="select_block" id="drop_block">
+                <div class="icone_txt_select" id="ti_select">
+                    <img src="../geral/assets/Brasil.png">
+                    <span>PT-BR</span>
+                </div>
+                <div class="icon_box" id="icon_box_id">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
+                        <path d="M1 7.78094L6.28 1.78679L12 7.78094" stroke="white" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="select_itens" id="select_list">
+                <li>
+                    <img src="../geral/assets/Usa.png">
+                    <span>EN</span>
+                </li>
+                <li>
+                    <img src="../geral/assets/Espanha.png">
+                    <span>ES</span>
+                </li>
+                <li>
+                    <img src="../geral/assets/China.png">
+                    <span>ZH</span>
+                </li>
+            </div>
+        </div>
+    `
+}
+
+function navInferior() {
+    return `
+        <div class="circles_box">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <nav class="footer_nav" id="ft_nav">
+            <a href="../inicial/inicial.html">
+                <button>INICIO</button>
+            </a>
+            <a href="../produtos/produtos.html">
+                <button>PRODUTOS</button>
+            </a>
+            <a href="../sobre/sobre.html">
+                <button>SOBRE NÓS</button>
+            </a>
+            <a href="../contato/contato.html" target="_blank">
+                <button>CONTATO</button>
+            </a>
+        </nav>
+        <div class="est_txt">
+            <span>PACIFICO IMPORTADORA © 2023</span>
+        </div>
+    `
+}
