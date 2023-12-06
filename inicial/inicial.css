@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;700;800&display=swap');
 
+/* ------------ BLOCO INICIAL ------------ */
 #home_page .initial_box {
 
     width: 100%;
@@ -115,6 +116,8 @@
     
 }
 
+/* ------------------------------------------------------- */
+/* ---------------- INFORMAÇÕES DO CENTRO ---------------- */
 .general_informations_block {
 
     display: flex;
@@ -250,8 +253,7 @@
 
 .main_container .products_list {
 
-    display: flex;
-    justify-content: center;
+    display: grid;
     gap: 6.25rem;
     margin: 7.81rem 0 10.935rem 0;
     padding: 0 5%;
@@ -259,19 +261,30 @@
     
 }
 
+/* ---------------------------------------------------- */
+/* --------------------- PRODUTOS --------------------- */
 .products_list .item_box {
 
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 8.38rem;
     width: 100%;
-    height: 26.8125rem;
-    background-color: rgba(30, 30, 118, .25);
+    background-color: rgba(30, 30, 118, .35);
     box-shadow: 0px 4px 100px rgba(0, 0, 0, .45);
     border-radius: 38px;
-    padding: 2.5rem 4rem 0 0;
     position: relative;
+
+}
+
+.item_box .item_image {
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-right: 2.4rem;
 
 }
 
@@ -279,13 +292,102 @@
 
     position: absolute;
     bottom: 0;
-    left: 5.2%;
 
 }
 
 .products_list .main_item_information {
 
+    min-width: 65.8%;
     height: 100%;
+    padding: 2.5rem 4rem 2.2rem 0;
+
+}
+
+.products_list .main_item_information h2 {
+
+
+    font-size: 3.4375rem;
+    font-weight: 800;
+    letter-spacing: .06875rem;
+    text-transform: uppercase;
+    margin-bottom: 1.7rem;
+
+}
+
+.products_list .additional_infos {
+
+    display: flex;
+    align-items: center;
+    gap: .94rem;
+
+}
+
+.products_list .additional_infos span {
+
+    font-size: 1.5625rem;
+    letter-spacing: .03125rem;
+    text-transform: uppercase;
+
+}
+
+.products_list .main_item_information .bar {
+
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, .15);
+    margin: 1.6rem 0 2.35rem;
+
+}
+
+.products_list .main_item_information p {
+
+    font-size: 1.375rem;
+    letter-spacing: .06875rem;
+    text-transform: uppercase;
+    margin-bottom: 2.2rem;
+
+}
+
+.products_list .main_item_information button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3.8125rem;
+    border-radius: 3rem;
+    background: var(--cor-branca-padrao);
+    color: #2D2DB9;
+    font-size: 1.5625rem;
+    font-weight: 800;
+    letter-spacing: .15625rem;
+
+}
+
+.products_list .main_item_information button:hover {
+
+    letter-spacing: .3rem;
+
+}
+
+/* ------------ INVERTER PRODUTOS ------------ */
+.products_list .item_box.reverse {
+
+    flex-direction: row-reverse;
+
+}
+
+.products_list .item_box.reverse .main_item_information {
+
+    padding-right: 0;
+    padding-left: 4rem;
+
+}
+
+.products_list .item_box.reverse .item_image {
+
+    padding-right: 0;
+    padding-left: 2.4rem;
 
 }
 
