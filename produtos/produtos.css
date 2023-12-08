@@ -111,7 +111,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
     padding: 16.94rem 4.88rem 11.75rem 6.25rem;
 
 }
@@ -170,19 +169,136 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding: 0 2.19rem 0 3.25rem;
+    margin-bottom: 1.31rem;
 
 }
 
-.itens_main_table .columns_titles span {
+.itens_main_table .columns_titles span, .itens_main_table .rows_boxs li span {
 
+    width: 100%;
     font-size: 1.5625rem;
     letter-spacing: .15625rem;
     text-transform: uppercase;
 
 }
 
+.itens_main_table .columns_titles span:first-child, .itens_main_table .rows_boxs li span:first-child {
+
+    width: max-content;
+    min-width: 12%;
+
+}
+
 .itens_main_table .columns_titles span:last-child {
 
-    width: 6rem;
+    min-width: 11.25rem;
+    width: 11.25rem;
+    margin-left: 4rem;
     
 }
+
+.itens_main_table .rows_boxs {
+
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    padding: 1.56rem;
+    background-color: var(--cor-azul-claro);
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, .25);
+    max-height: 43rem;
+    scroll-behavior: smooth;
+    overflow: auto;
+
+}
+
+.itens_main_table .rows_boxs li {
+
+    display: flex;
+    justify-content: space-between;
+    padding: .63rem .63rem .63rem 1.88rem;
+
+}
+
+.itens_main_table .rows_boxs li:nth-child(2n + 1) {
+
+    background-color: var(--cor-azul-escuro);
+
+}
+
+.itens_main_table .rows_boxs li span {
+
+    font-weight: 700;
+    letter-spacing: .39063rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.itens_main_table .rows_boxs li span:first-child {
+
+    letter-spacing: .74219rem;
+
+}
+
+.itens_main_table .rows_boxs li span:not(:last-child) {
+
+    margin: .37rem 0;
+
+}
+
+.itens_main_table .rows_boxs li button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 11.25rem;
+    min-height: 100%;
+    background-color: var(--cor-azul-escuro);
+    text-align: center;
+    font-size: .9375rem;
+    letter-spacing: .225rem;
+    text-transform: uppercase;
+    margin-left: 4rem;
+    
+}
+
+.itens_main_table .rows_boxs li:nth-child(2n + 1) button {
+
+    background-color: var(--cor-azul-claro);
+    
+}
+
+.itens_main_table .rows_boxs li button:hover {
+
+    letter-spacing: .15rem;
+    
+}
+
+.itens_main_table li span:not(:first-child) {
+
+    text-align: center;
+
+}
+
+.itens_main_table .rows_boxs {
+
+    scroll-behavior: smooth;
+    
+}
+
+.itens_main_table .rows_boxs::-webkit-scrollbar {
+    width: 9px;
+}
+  
+.itens_main_table .rows_boxs::-webkit-scrollbar-thumb {
+    background: #181881;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.25);
+}
+  
+.itens_main_table .rows_boxs::-webkit-scrollbar-track {
+    background: rgba(36, 36, 172, .75);
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, .25);
+}
+  
