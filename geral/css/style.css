@@ -50,6 +50,12 @@ button, a {
 
 }
 
+ul {
+
+    list-style: none;
+
+}
+
 /* -------------------- MAIN -------------------- */
 
 .container_xl {
