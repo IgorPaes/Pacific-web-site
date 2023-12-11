@@ -16,10 +16,22 @@
     height: 100%;
     background-color: rgba(49, 49, 208, .85);
     overflow: hidden;
+    position: relative;
 
 }
 
-.imagem_principal {
+#videoPrincipal {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+
+}
+
+.main_item_background {
 
     position: absolute;
     background-image: url(../geral/assets/Ship.png);
@@ -392,10 +404,3 @@
 }
 
 /* ------------------------------------------------ */
-
-#videoPrincipal {
-
-    width: 100% !important;
-    height: 100% !important;
-
-}
