@@ -3,18 +3,20 @@ navegacoes(2);
 
 const blocoMain = document.querySelector('.main_container');
 const btnsVerMais = document.querySelectorAll('.item_block .learn_more_product');
+const contProdutos = document.querySelector('.products_blocks');
 
-function carregaBlocoCategoria(img, titulo, desc) {
-    return `
+function carregaBlocoCategoria(imgSrc, titulo, desc) {
+    let engloba = document.createElement("div");
+    engloba.innerHTML = `
     <div class="item_block">
         <div class="product_imagem_block">
             <figure>
-                <img src="https://media.discordapp.net/attachments/715757159651999788/1182087050292375632/um.png?ex=65836b5a&is=6570f65a&hm=9f1a09cb27f838bbab0f8c38199b7212791f68899db489e621f8646d741bea81&=&format=webp&quality=lossless&width=171&height=171" alt="Imagem do produto">
+                <img src="${imgSrc}" alt="Imagem do produto">
             </figure>
         </div>
         <div class="product_description">
-            <h3>BARRILHA</h3>
-            <p>A barrilha, também conhecida como carbonato de sódio, é um composto...</p>
+            <h3>${titulo}</h3>
+            <p>${desc}</p>
             <button type="button" class="learn_more_product">
                 <span>SAIBA MAIS</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="52" height="24" viewBox="0 0 52 24" fill="none">
@@ -25,7 +27,32 @@ function carregaBlocoCategoria(img, titulo, desc) {
         </div>
     </div>
     `
+    return engloba.firstElementChild;
 }
+
+let produtos = [
+    {
+        "SrcImagem": "https://media.discordapp.net/attachments/715757159651999788/1182087050292375632/um.png?ex=65836b5a&is=6570f65a&hm=9f1a09cb27f838bbab0f8c38199b7212791f68899db489e621f8646d741bea81&=&format=webp&quality=lossless&width=171&height=171",
+        "titulo": "BARRILHA",
+        "descricao": "A barrilha, também conhecida como carbonato de sódio, é um composto..."
+    },
+    {
+        "SrcImagem": "https://media.discordapp.net/attachments/715757159651999788/1182087050292375632/um.png?ex=65836b5a&is=6570f65a&hm=9f1a09cb27f838bbab0f8c38199b7212791f68899db489e621f8646d741bea81&=&format=webp&quality=lossless&width=171&height=171",
+        "titulo": "Bicarbonato de Sódio",
+        "descricao": "O bicarbonato de sódio é um composto químico versátil e de ampla utilização..."
+    }
+];
+
+produtos.forEach((produto) => {
+
+    const SrcImagem = produto.SrcImagem;
+    const titulo = produto.titulo;
+    const descricao = produto.descricao;
+    
+    const blocoProduto = carregaBlocoCategoria(SrcImagem, titulo, descricao);
+    contProdutos.insertAdjacentElement('beforeend', blocoProduto)
+
+});
 
 function carregaListaProdutos() {
     return `
@@ -130,47 +157,3 @@ function carregaListaProdutos() {
     </div>
     ` 
 }
-
-var produtos = [
-    {
-        "imagem": "https://media.discordapp.net/attachments/715757159651999788/1182087050292375632/um.png?ex=65836b5a&is=6570f65a&hm=9f1a09cb27f838bbab0f8c38199b7212791f68899db489e621f8646d741bea81&=&format=webp&quality=lossless&width=171&height=171",
-        "titulo": "BARRILHA",
-        "descricao": "A barrilha, também conhecida como carbonato de sódio, é um composto..."
-    },
-    {
-        "imagem": "https://media.discordapp.net/attachments/715757159651999788/1182087050292375632/um.png?ex=65836b5a&is=6570f65a&hm=9f1a09cb27f838bbab0f8c38199b7212791f68899db489e621f8646d741bea81&=&format=webp&quality=lossless&width=171&height=171",
-        "titulo": "Bicarbonato de Sódio",
-        "descricao": "O bicarbonato de sódio é um composto químico versátil e de ampla utilização..."
-    }
-];
-
-var products_blocks = document.querySelector('.products_blocks');
-
-produtos.forEach(function(produto) {
-    console.log(produto)
-    var item_block = document.createElement('div');
-    item_block.className = 'item_block';
-
-    var product_imagem_block = document.createElement('div');
-    product_imagem_block.className = 'product_imagem_block';
-    var figure = document.createElement('figure');
-    var img = document.createElement('img');
-    img.src = produto.imagem;
-    img.alt = 'Imagem do produto';
-    figure.appendChild(img);
-    product_imagem_block.appendChild(figure);
-
-    var product_description = document.createElement('div');
-    product_description.className = 'product_description';
-    var h3 = document.createElement('h3');
-    h3.textContent = produto.titulo;
-    var p = document.createElement('p');
-    p.textContent = produto.descricao;
-    product_description.appendChild(h3);
-    product_description.appendChild(p);
-
-    item_block.appendChild(product_imagem_block);
-    item_block.appendChild(product_description);
-
-    products_blocks.appendChild(item_block);
-});
