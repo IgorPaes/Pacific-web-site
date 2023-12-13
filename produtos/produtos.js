@@ -30,29 +30,13 @@ function carregaBlocoCategoria(imgSrc, titulo, desc) {
     return engloba.firstElementChild;
 }
 
-let produtos = [
-    {
-        "SrcImagem": "https://media.discordapp.net/attachments/715757159651999788/1182087050292375632/um.png?ex=65836b5a&is=6570f65a&hm=9f1a09cb27f838bbab0f8c38199b7212791f68899db489e621f8646d741bea81&=&format=webp&quality=lossless&width=171&height=171",
-        "titulo": "BARRILHA",
-        "descricao": "A barrilha, também conhecida como carbonato de sódio, é um composto..."
-    },
-    {
-        "SrcImagem": "https://media.discordapp.net/attachments/715757159651999788/1182087050292375632/um.png?ex=65836b5a&is=6570f65a&hm=9f1a09cb27f838bbab0f8c38199b7212791f68899db489e621f8646d741bea81&=&format=webp&quality=lossless&width=171&height=171",
-        "titulo": "Bicarbonato de Sódio",
-        "descricao": "O bicarbonato de sódio é um composto químico versátil e de ampla utilização..."
-    }
-];
-
-produtos.forEach((produto) => {
-
-    const SrcImagem = produto.SrcImagem;
-    const titulo = produto.titulo;
-    const descricao = produto.descricao;
-    
-    const blocoProduto = carregaBlocoCategoria(SrcImagem, titulo, descricao);
-    contProdutos.insertAdjacentElement('beforeend', blocoProduto)
-
-});
+fetch('../geral/json/produtos.json')
+.then(response => response.json()).then(produtos => {
+    produtos.forEach((produto) => {
+        const blocoProduto = carregaBlocoCategoria(produto.SrcImagem,  produto.titulo, produto.descricao);
+        contProdutos.insertAdjacentElement('beforeend', blocoProduto);
+    });
+}).catch(error => console.error('Erro:', error));
 
 function carregaListaProdutos() {
     return `
