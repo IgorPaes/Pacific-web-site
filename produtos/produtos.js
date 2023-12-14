@@ -1,9 +1,17 @@
 import navegacoes from '../geral/js/navegacoes.js';
 navegacoes(2);
 
-const blocoMain = document.querySelector('.main_container');
-const btnsVerMais = document.querySelectorAll('.item_block .learn_more_product');
-const contProdutos = document.querySelector('.products_blocks');
+// const blocoMain = document.querySelector('.main_container');
+const contProdutos = document.querySelector('.category_block');
+
+fetch('../geral/json/categorias.json')
+.then(response => response.json()).then(categorias => {
+    categorias.forEach((categoria, numeroBtn) => {
+        const blocoProduto = carregaBlocoCategoria(categoria.SrcImagem,  categoria.titulo, categoria.descricao);
+        contProdutos.insertAdjacentElement('beforeend', blocoProduto);
+        carregaBtn(categoria, numeroBtn);
+    });
+}).catch(error => console.error('Erro:', error));
 
 function carregaBlocoCategoria(imgSrc, titulo, desc) {
     let engloba = document.createElement("div");
@@ -30,114 +38,49 @@ function carregaBlocoCategoria(imgSrc, titulo, desc) {
     return engloba.firstElementChild;
 }
 
-fetch('../geral/json/produtos.json')
-.then(response => response.json()).then(produtos => {
-    produtos.forEach((produto) => {
-        const blocoProduto = carregaBlocoCategoria(produto.SrcImagem,  produto.titulo, produto.descricao);
-        contProdutos.insertAdjacentElement('beforeend', blocoProduto);
-    });
-}).catch(error => console.error('Erro:', error));
-
-function carregaListaProdutos() {
+function carregaBlocoPrimario(imgSrc, titulo) {
     return `
-    <div class="category_product_block">
-        <div class="category_name_block">
-            <figure>
-                <img src="https://media.discordapp.net/attachments/715757159651999788/1182087050292375632/um.png?ex=65836b5a&is=6570f65a&hm=9f1a09cb27f838bbab0f8c38199b7212791f68899db489e621f8646d741bea81&=&format=webp&quality=lossless&width=171&height=171" alt="Imagem do produto">
-            </figure>
-            <div>
-                <h2>plastificantes</h2>
-                <p>veja todos os produtos abaixo</p>
-            </div>
-        </div>
-        <ul class="itens_main_table">
-            <li class="columns_titles">
-                <span>NOME</span>
-                <span>NOME QUÍMICO</span>
-                <span>Nº CAS</span>
-                <span>DADOS</span>
-                <span></span>
-            </li>
-            <ul class="rows_boxs">
-                <li>
-                    <span>ATBC</span>
-                    <span>C20H34O8</span>
-                    <span>77-90-7</span>
-                    <span>Baixa volatilidade</span>
-                    <button>VER MAIS</button>
-                </li>
-                <li>
-                    <span>DBM</span>
-                    <span>C20H34O8</span>
-                    <span>77-90-7</span>
-                    <span>Baixa volatilidade</span>
-                    <button>VER MAIS</button>
-                </li>
-                <li>
-                    <span>DBM</span>
-                    <span>C20H34O8</span>
-                    <span>77-90-7</span>
-                    <span>Baixa volatilidade</span>
-                    <button>VER MAIS</button>
-                </li>
-                <li>
-                    <span>DBM</span>
-                    <span>C20H34O8</span>
-                    <span>77-90-7</span>
-                    <span>Baixa volatilidade</span>
-                    <button>VER MAIS</button>
-                </li>
-                <li>
-                    <span>DBM</span>
-                    <span>C20H34O8</span>
-                    <span>77-90-7</span>
-                    <span>Baixa volatilidade</span>
-                    <button>VER MAIS</button>
-                </li>
-                <li>
-                    <span>DBM</span>
-                    <span>C20H34O8</span>
-                    <span>77-90-7</span>
-                    <span>Baixa volatilidade</span>
-                    <button>VER MAIS</button>
-                </li>
-                <li>
-                    <span>DBM</span>
-                    <span>C20H34O8</span>
-                    <span>77-90-7</span>
-                    <span>Baixa volatilidade</span>
-                    <button>VER MAIS</button>
-                </li>
-                <li>
-                    <span>DBM</span>
-                    <span>C20H34O8</span>
-                    <span>77-90-7</span>
-                    <span>Baixa volatilidade</span>
-                    <button>VER MAIS</button>
-                </li>
-                <li>
-                    <span>DBM</span>
-                    <span>C20H34O8</span>
-                    <span>77-90-7</span>
-                    <span>Baixa volatilidade</span>
-                    <button>VER MAIS</button>
-                </li>
-                <li>
-                    <span>DBM</span>
-                    <span>C20H34O8</span>
-                    <span>77-90-7</span>
-                    <span>Baixa volatilidade</span>
-                    <button>VER MAIS</button>
-                </li>
-                <li>
-                    <span>DBM</span>
-                    <span>C20H34O8</span>
-                    <span>77-90-7</span>
-                    <span>Baixa volatilidade</span>
-                    <button>VER MAIS</button>
-                </li>
-            </ul>
-        </ul>
+    <figure>
+        <img src="${imgSrc}" alt="Imagem do produto">
+    </figure>
+    <div>
+        <h2>${titulo}</h2>
+        <p>veja todos os produtos abaixo</p>
     </div>
-    ` 
+    `
+}
+
+function carregaListaProdutos(nome, nomeQuimico, ncas, dados) {
+    let engloba = document.createElement("div");
+    engloba.innerHTML = `
+    <li>
+        <span>${nome}</span>
+        <span>${nomeQuimico}</span>
+        <span>${ncas}</span>
+        <span>${dados}</span>
+        <button>VER MAIS</button>
+    </li>
+    `
+    return engloba.firstElementChild;
+}
+
+// fetch('../geral/json/categorias.json')
+// .then(response => response.json()).then(categorias => {
+//     categorias.forEach((produto) => {
+
+//     });
+// }).catch(error => console.error('Erro:', error));
+
+function carregaBtn(categoria, numeroBtn) {
+    const btnsVerMais = document.querySelectorAll('.item_block .learn_more_product');
+    const blocoPrimario = document.querySelector(".category_name_block");
+    btnsVerMais[numeroBtn].addEventListener('click', () => {
+        console.log(1);
+        console.log(categoria.listaPrdutos);
+        contProdutos.style = "display: none"
+        document.querySelector(".category_product_block").style = "";
+
+        blocoPrimario.innerHTML = carregaBlocoPrimario(categoria.SrcImagem, categoria.titulo);
+    });
+
 }

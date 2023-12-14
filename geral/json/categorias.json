@@ -5,10 +5,10 @@
         "descricao": "A barrilha, também conhecida como carbonato de sódio, é um composto...",
         "listaPrdutos": [  
             {
-                "nome": "1",
-                "nomeQuimico": "2",
-                "ncas": "3",
-                "dados": "4"
+                "nome": "ATBC",
+                "nomeQuimico": "C20H34O8",
+                "ncas": "77-90-7",
+                "dados": "Baixa volatilidade"
             },
             {
                 "nome": "10",
