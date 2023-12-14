@@ -73,14 +73,17 @@ function carregaListaProdutos(nome, nomeQuimico, ncas, dados) {
 
 function carregaBtn(categoria, numeroBtn) {
     const btnsVerMais = document.querySelectorAll('.item_block .learn_more_product');
-    const blocoPrimario = document.querySelector(".category_name_block");
+    const blocoPrimario = document.querySelector(".category_product_block .category_name_block");
+    const blocoLista = document.querySelector(".itens_main_table .rows_boxs")
+    const listaProdutos = categoria.listaPrdutos;
     btnsVerMais[numeroBtn].addEventListener('click', () => {
-        console.log(1);
-        console.log(categoria.listaPrdutos);
         contProdutos.style = "display: none"
         document.querySelector(".category_product_block").style = "";
-
         blocoPrimario.innerHTML = carregaBlocoPrimario(categoria.SrcImagem, categoria.titulo);
+        listaProdutos.forEach((produto) => {
+            const linhaProduto = carregaListaProdutos(produto.nome, produto.nomeQuimico, produto.ncas, produto.dados);
+            blocoLista.insertAdjacentElement('beforeend', linhaProduto);
+        });
     });
 
 }
