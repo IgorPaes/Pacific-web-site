@@ -2,8 +2,23 @@
     {
         "SrcImagem": "https://media.discordapp.net/attachments/715757159651999788/1182087050292375632/um.png?ex=65836b5a&is=6570f65a&hm=9f1a09cb27f838bbab0f8c38199b7212791f68899db489e621f8646d741bea81&=&format=webp&quality=lossless&width=171&height=171",
         "titulo": "BARRILHA",
-        "descricao": "A barrilha, também conhecida como carbonato de sódio, é um composto..."
+        "descricao": "A barrilha, também conhecida como carbonato de sódio, é um composto...",
+        "listaPrdutos": [  
+            {
+                "nome": "1",
+                "nomeQuimico": "2",
+                "ncas": "3",
+                "dados": "4"
+            },
+            {
+                "nome": "10",
+                "nomeQuimico": "20",
+                "ncas": "30",
+                "dados": "40"
+            }
+        ]
     },
+
     {
         "SrcImagem": "https://media.discordapp.net/attachments/715757159651999788/1182087050292375632/um.png?ex=65836b5a&is=6570f65a&hm=9f1a09cb27f838bbab0f8c38199b7212791f68899db489e621f8646d741bea81&=&format=webp&quality=lossless&width=171&height=171",
         "titulo": "Bicarbonato de Sódio",
