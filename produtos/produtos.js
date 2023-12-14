@@ -1,7 +1,6 @@
 import navegacoes from '../geral/js/navegacoes.js';
 navegacoes(2);
 
-// const blocoMain = document.querySelector('.main_container');
 const contProdutos = document.querySelector('.category_block');
 
 fetch('../geral/json/categorias.json')
@@ -50,13 +49,13 @@ function carregaBlocoPrimario(imgSrc, titulo) {
     `
 }
 
-function carregaListaProdutos(nome, nomeQuimico, ncas, dados) {
+function carregaListaProdutos(nome, nomeQuimico, nCas, dados) {
     let engloba = document.createElement("div");
     engloba.innerHTML = `
     <li>
         <span>${nome}</span>
         <span>${nomeQuimico}</span>
-        <span>${ncas}</span>
+        <span>${nCas}</span>
         <span>${dados}</span>
         <button>VER MAIS</button>
     </li>
@@ -64,19 +63,12 @@ function carregaListaProdutos(nome, nomeQuimico, ncas, dados) {
     return engloba.firstElementChild;
 }
 
-// fetch('../geral/json/categorias.json')
-// .then(response => response.json()).then(categorias => {
-//     categorias.forEach((produto) => {
-
-//     });
-// }).catch(error => console.error('Erro:', error));
-
+const blocoLista = document.querySelector(".itens_main_table .rows_boxs");
+const blocoPrimario = document.querySelector(".category_product_block .category_name_block");
 function carregaBtn(categoria, numeroBtn) {
-    const btnsVerMais = document.querySelectorAll('.item_block .learn_more_product');
-    const blocoPrimario = document.querySelector(".category_product_block .category_name_block");
-    const blocoLista = document.querySelector(".itens_main_table .rows_boxs")
+    const btnsSaibaMais = document.querySelectorAll('.item_block .learn_more_product');
     const listaProdutos = categoria.listaPrdutos;
-    btnsVerMais[numeroBtn].addEventListener('click', () => {
+    btnsSaibaMais[numeroBtn].addEventListener('click', () => {
         contProdutos.style = "display: none"
         document.querySelector(".category_product_block").style = "";
         blocoPrimario.innerHTML = carregaBlocoPrimario(categoria.SrcImagem, categoria.titulo);
@@ -86,4 +78,36 @@ function carregaBtn(categoria, numeroBtn) {
         });
     });
 
+}
+
+// VER MAIS DE CADA PRODUTO
+
+const blocoInfos = document.querySelector(".block_see_more .see_more_background");
+
+function carregaMaisInfos(nome, dados, nomeCompleto, nomeQuimico, nCas, aplicacoes) {
+    return `
+    <div>
+        <h1>${nome}</h1>
+    </div>
+    <div>
+        <h2>DADOS DO PRODUTO</h2>
+        <p>${dados}</p>
+    </div>
+    <div>
+        <h2>Características</h2>
+        <p><span>TIPO: </span>${nomeCompleto} (${nome})</p>
+        <p><span>NOME QUÍMICO: </span>${nomeQuimico}</p>
+        <p><span>Nº CAS: </span>${nCas}</p>
+    </div>
+    <div>
+        <h2>Aplicações</h2>
+        <p>${aplicacoes}</p>
+    </div>
+    `
+}
+
+const btnsVerMais = document.querySelector("");
+
+function carregaVerMais() {
+    
 }
