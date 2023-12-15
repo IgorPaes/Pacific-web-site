@@ -314,8 +314,7 @@
 
     width: 100%;
     padding: 16.55rem 6.25rem 0 6.25rem;
-    margin-bottom: 6.65rem;
-
+    margin-bottom: 10rem;
 }
 
 .main_container .block_see_more .see_more_background {
@@ -329,6 +328,8 @@
     border-radius: .9375rem;
     box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, .25);
     padding: 3.56rem 3.35rem 7.5rem 3.35rem;
+    margin-bottom: 6.65rem;
+
 
 }
 
@@ -365,6 +366,12 @@
 
 }
 
+.main_container .block_see_more p:not(:last-child) {
+
+    margin-bottom: 2.2rem;
+
+}
+
 .main_container .block_see_more p span {
 
     font-weight: 800;
@@ -374,5 +381,23 @@
 .main_container .block_see_more p span::before {
 
     content: '• ';
+
+}
+
+/* ----- */
+
+/* .main_container .budget_block {
+
+    
+
+} */
+
+.main_container .budget_block h1 {
+
+    font-size: 6.25rem;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: .625rem;
+    text-transform: uppercase;
 
 }

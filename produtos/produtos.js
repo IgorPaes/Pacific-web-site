@@ -8,7 +8,7 @@ fetch('../geral/json/categorias.json')
     categorias.forEach((categoria, numeroBtn) => {
         const blocoProduto = carregaBlocoCategoria(categoria.SrcImagem,  categoria.titulo, categoria.descricao);
         contProdutos.insertAdjacentElement('beforeend', blocoProduto);
-        carregaBtn(categoria, numeroBtn);
+        carregaBtns(categoria, numeroBtn);
     });
 }).catch(error => console.error('Erro:', error));
 
@@ -57,7 +57,7 @@ function carregaListaProdutos(nome, nomeQuimico, nCas, dados) {
         <span>${nomeQuimico}</span>
         <span>${nCas}</span>
         <span>${dados}</span>
-        <button>VER MAIS</button>
+        <button id="see_more_btn">VER MAIS</button>
     </li>
     `
     return engloba.firstElementChild;
@@ -65,27 +65,29 @@ function carregaListaProdutos(nome, nomeQuimico, nCas, dados) {
 
 const blocoLista = document.querySelector(".itens_main_table .rows_boxs");
 const blocoPrimario = document.querySelector(".category_product_block .category_name_block");
-function carregaBtn(categoria, numeroBtn) {
+function carregaBtns(categoria, numeroBtn) {
     const btnsSaibaMais = document.querySelectorAll('.item_block .learn_more_product');
     const listaProdutos = categoria.listaPrdutos;
     btnsSaibaMais[numeroBtn].addEventListener('click', () => {
-        contProdutos.style = "display: none"
+        contProdutos.style = "display: none";
         document.querySelector(".category_product_block").style = "";
         blocoPrimario.innerHTML = carregaBlocoPrimario(categoria.SrcImagem, categoria.titulo);
         listaProdutos.forEach((produto) => {
             const linhaProduto = carregaListaProdutos(produto.nome, produto.nomeQuimico, produto.ncas, produto.dados);
             blocoLista.insertAdjacentElement('beforeend', linhaProduto);
+            const btn = linhaProduto.querySelector('.rows_boxs #see_more_btn');
+            btn.addEventListener('click', () => {
+                carregaVerMais(produto);
+            })
         });
     });
-
 }
 
 // VER MAIS DE CADA PRODUTO
 
-const blocoInfos = document.querySelector(".block_see_more .see_more_background");
-
 function carregaMaisInfos(nome, dados, nomeCompleto, nomeQuimico, nCas, aplicacoes) {
-    return `
+    let engloba = document.createElement("div");
+    engloba.innerHTML = `
     <div>
         <h1>${nome}</h1>
     </div>
@@ -104,10 +106,17 @@ function carregaMaisInfos(nome, dados, nomeCompleto, nomeQuimico, nCas, aplicaco
         <p>${aplicacoes}</p>
     </div>
     `
+    return engloba.children;
 }
 
-const btnsVerMais = document.querySelector("");
-
-function carregaVerMais() {
-    
+function carregaVerMais(produto) {
+    const infosProduto = produto.verMais;
+    const blocoInfosProd = carregaMaisInfos(produto.nome, infosProduto.dados, infosProduto.nomeCompleto, produto.nomeQuimico, produto.nCas, infosProduto.aplicacoes);
+    document.querySelector(".category_product_block").style = "display: none";
+    document.querySelector(".block_see_more").style = "display: block";
+    const blocoInfos = document.querySelector(".block_see_more .see_more_background");
+    for(let i = 0; i < blocoInfosProd.length; i++) {
+        let clone = blocoInfosProd[i].cloneNode(true);
+        blocoInfos.insertAdjacentElement('beforeend', clone);
+    }
 }
