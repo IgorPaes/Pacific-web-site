@@ -73,7 +73,7 @@ function carregaBtns(categoria, numeroBtn) {
         document.querySelector(".category_product_block").style = "";
         blocoPrimario.innerHTML = carregaBlocoPrimario(categoria.SrcImagem, categoria.titulo);
         listaProdutos.forEach((produto) => {
-            const linhaProduto = carregaListaProdutos(produto.nome, produto.nomeQuimico, produto.ncas, produto.dados);
+            const linhaProduto = carregaListaProdutos(produto.nome, produto.nomeQuimico, produto.nCas, produto.dados);
             blocoLista.insertAdjacentElement('beforeend', linhaProduto);
             const btn = linhaProduto.querySelector('.rows_boxs #see_more_btn');
             btn.addEventListener('click', () => {
