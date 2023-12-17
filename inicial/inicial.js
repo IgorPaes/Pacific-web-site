@@ -5,8 +5,10 @@ const blocoCat = document.querySelector(".products_list");
 fetch('../geral/json/categorias.json')
 .then(response => response.json()).then(categorias => {
     categorias.forEach((categoria) => {
-        const item = criaBlocoCat(categoria);
-        blocoCat.insertAdjacentElement('beforeend', item);
+        if(categoria.ativoInicial) {            
+            const item = criaBlocoCat(categoria);
+            blocoCat.insertAdjacentElement('beforeend', item);
+        }
     });
 }).catch(error => console.error('Erro:', error));
 {/* <img src="../geral/assets/packaging.png" alt="Embalagem"></img> */}

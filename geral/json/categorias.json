@@ -1,5 +1,6 @@
 [
     {
+        "ativoInicial": true,
         "SrcImagemInicial": "https://media.discordapp.net/attachments/872565816602792038/1186023286912602162/packaging.png?ex=6591bd42&is=657f4842&hm=b320727efc0ecbe132bda7ff55083cb0f69e23b9bb7cd9a26bc6502d57e11b8b&=&format=webp&quality=lossless&width=423&height=672",
         "SrcImagemPadrao": "https://media.discordapp.net/attachments/715757159651999788/1182087050292375632/um.png?ex=65836b5a&is=6570f65a&hm=9f1a09cb27f838bbab0f8c38199b7212791f68899db489e621f8646d741bea81&=&format=webp&quality=lossless&width=171&height=171",
         "titulo": "BARRILHA",
@@ -68,6 +69,7 @@
     },
 
     {
+        "ativoInicial": true,
         "SrcImagemInicial": "https://media.discordapp.net/attachments/872565816602792038/1186023286912602162/packaging.png?ex=6591bd42&is=657f4842&hm=b320727efc0ecbe132bda7ff55083cb0f69e23b9bb7cd9a26bc6502d57e11b8b&=&format=webp&quality=lossless&width=423&height=672",
         "SrcImagemPadrao": "https://media.discordapp.net/attachments/715757159651999788/1182087050292375632/um.png?ex=65836b5a&is=6570f65a&hm=9f1a09cb27f838bbab0f8c38199b7212791f68899db489e621f8646d741bea81&=&format=webp&quality=lossless&width=171&height=171",
         "titulo": "Bicarbonato de Sódio",
