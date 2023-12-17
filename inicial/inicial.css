@@ -70,6 +70,7 @@
 
 .image_ligths .light_strip {
     
+    min-width: 20rem;
     height: 100%;
     background-color: rgba(0, 0, 0, .03);
 
@@ -209,7 +210,7 @@
     height: 100%;
     border-radius: 2.4375rem;
     background-color: #F6F6F6;
-    padding: 0 2rem;
+    padding: 2rem;
 
 }
 
@@ -292,10 +293,12 @@
 
 }
 
-.products_list .item_box img {
+.products_list .item_box .item_image img {
 
     position: absolute;
     bottom: 0;
+    min-height: 140%;
+    max-height: 145%;
 
 }
 
@@ -375,20 +378,20 @@
 }
 
 /* ------------ INVERTER PRODUTOS ------------ */
-.products_list .item_box.reverse {
+.products_list .item_box:nth-child(2n) {
 
     flex-direction: row-reverse;
 
 }
 
-.products_list .item_box.reverse .main_item_information {
+.products_list .item_box:nth-child(2n) .main_item_information {
 
     padding-right: 0;
     padding-left: 4rem;
 
 }
 
-.products_list .item_box.reverse .item_image {
+.products_list .item_box:nth-child(2n) .item_image {
 
     padding-right: 0;
     padding-left: 2.4rem;

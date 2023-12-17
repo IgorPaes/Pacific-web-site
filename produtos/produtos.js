@@ -6,7 +6,7 @@ const contProdutos = document.querySelector('.category_block');
 fetch('../geral/json/categorias.json')
 .then(response => response.json()).then(categorias => {
     categorias.forEach((categoria, numeroBtn) => {
-        const blocoProduto = carregaBlocoCategoria(categoria.SrcImagem,  categoria.titulo, categoria.descricao);
+        const blocoProduto = carregaBlocoCategoria(categoria.SrcImagemPadrao,  categoria.titulo, categoria.descricao);
         contProdutos.insertAdjacentElement('beforeend', blocoProduto);
         carregaBtns(categoria, numeroBtn);
     });
@@ -71,7 +71,7 @@ function carregaBtns(categoria, numeroBtn) {
     btnsSaibaMais[numeroBtn].addEventListener('click', () => {
         contProdutos.style = "display: none";
         document.querySelector(".category_product_block").style = "";
-        blocoPrimario.innerHTML = carregaBlocoPrimario(categoria.SrcImagem, categoria.titulo);
+        blocoPrimario.innerHTML = carregaBlocoPrimario(categoria.SrcImagemPadrao, categoria.titulo);
         listaProdutos.forEach((produto) => {
             const linhaProduto = carregaListaProdutos(produto.nome, produto.nomeQuimico, produto.nCas, produto.dados);
             blocoLista.insertAdjacentElement('beforeend', linhaProduto);

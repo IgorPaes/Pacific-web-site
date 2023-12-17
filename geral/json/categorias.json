@@ -1,6 +1,7 @@
 [
     {
-        "SrcImagem": "https://media.discordapp.net/attachments/715757159651999788/1182087050292375632/um.png?ex=65836b5a&is=6570f65a&hm=9f1a09cb27f838bbab0f8c38199b7212791f68899db489e621f8646d741bea81&=&format=webp&quality=lossless&width=171&height=171",
+        "SrcImagemInicial": "https://media.discordapp.net/attachments/872565816602792038/1186023286912602162/packaging.png?ex=6591bd42&is=657f4842&hm=b320727efc0ecbe132bda7ff55083cb0f69e23b9bb7cd9a26bc6502d57e11b8b&=&format=webp&quality=lossless&width=423&height=672",
+        "SrcImagemPadrao": "https://media.discordapp.net/attachments/715757159651999788/1182087050292375632/um.png?ex=65836b5a&is=6570f65a&hm=9f1a09cb27f838bbab0f8c38199b7212791f68899db489e621f8646d741bea81&=&format=webp&quality=lossless&width=171&height=171",
         "titulo": "BARRILHA",
         "descricao": "A barrilha, também conhecida como carbonato de sódio, é um composto...",
         "listaPrdutos": [  
@@ -67,8 +68,33 @@
     },
 
     {
-        "SrcImagem": "https://media.discordapp.net/attachments/715757159651999788/1182087050292375632/um.png?ex=65836b5a&is=6570f65a&hm=9f1a09cb27f838bbab0f8c38199b7212791f68899db489e621f8646d741bea81&=&format=webp&quality=lossless&width=171&height=171",
+        "SrcImagemInicial": "https://media.discordapp.net/attachments/872565816602792038/1186023286912602162/packaging.png?ex=6591bd42&is=657f4842&hm=b320727efc0ecbe132bda7ff55083cb0f69e23b9bb7cd9a26bc6502d57e11b8b&=&format=webp&quality=lossless&width=423&height=672",
+        "SrcImagemPadrao": "https://media.discordapp.net/attachments/715757159651999788/1182087050292375632/um.png?ex=65836b5a&is=6570f65a&hm=9f1a09cb27f838bbab0f8c38199b7212791f68899db489e621f8646d741bea81&=&format=webp&quality=lossless&width=171&height=171",
         "titulo": "Bicarbonato de Sódio",
-        "descricao": "O bicarbonato de sódio é um composto químico versátil e de ampla utilização..."
+        "descricao": "O bicarbonato de sódio é um composto químico versátil e de ampla utilização...",
+        "listaPrdutos": [  
+            {
+                "nome": "AAAA",
+                "nomeQuimico": "C20H34O8",
+                "nCas": "77-90-7",
+                "dados": "Baixa volatilidade",
+                "verMais": {
+                    "dados": "• ATBC (Citrato de Acetil Tributil) é um grau supremo de plastificante não tóxico e seguro sem ftalato. Está em conformidade com os requisitos relevantes de alimentos, agentes farmacêuticos para o corpo humano no regulamento da UE REACH e FDA.<br><br> • Excelente inter-miscibilidade e alta eficiência de plastificação.<br><br> • Excelente inter-miscibilidade e alta eficiência de plastificação.<br><br> • Forte resistência às intempéries<br><br> • Melhora efetivamente a ductilidade do produto<br><br> • Boa biodegradabilidade, de acordo com os padrões da Organização para Cooperação e Desenvolvimento Econômico (OCDE)",
+                    "nomeCompleto": "Tipo: Citrato de Acetil Tributil", 
+                    "aplicacoes": "• Granulação/filme de PVC não tóxico <br><br> • Recipiente de embalagem de alimentos e almofada de vedação<br><br> • Produtos médicos de plástico<br><br> • brinquedos para crianças<br><br> • Couro artificial de PVC, papel de parede"
+                }
+            },
+            {
+                "nome": "BBBB",
+                "nomeQuimico": "C20H34O8",
+                "nCas": "77-90-7",
+                "dados": "Baixa volatilidade",
+                "verMais": {
+                    "dados": "• ATBC (Citrato de Acetil Tributil) é um grau supremo de plastificante não tóxico e seguro sem ftalato. Está em conformidade com os requisitos relevantes de alimentos, agentes farmacêuticos para o corpo humano no regulamento da UE REACH e FDA.<br><br> • Excelente inter-miscibilidade e alta eficiência de plastificação.<br><br> • Excelente inter-miscibilidade e alta eficiência de plastificação.<br><br> • Forte resistência às intempéries<br><br> • Melhora efetivamente a ductilidade do produto<br><br> • Boa biodegradabilidade, de acordo com os padrões da Organização para Cooperação e Desenvolvimento Econômico (OCDE)",
+                    "nomeCompleto": "Tipo: Citrato de Acetil Tributil", 
+                    "aplicacoes": "• Granulação/filme de PVC não tóxico <br><br> • Recipiente de embalagem de alimentos e almofada de vedação<br><br> • Produtos médicos de plástico<br><br> • brinquedos para crianças<br><br> • Couro artificial de PVC, papel de parede"
+                }
+            }
+        ]
     }
 ]
