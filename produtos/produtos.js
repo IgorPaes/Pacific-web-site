@@ -2,14 +2,22 @@ import navegacoes from '../geral/js/navegacoes.js';
 navegacoes(2);
 
 const contProdutos = document.querySelector('.category_block');
-
 fetch('../geral/json/categorias.json')
 .then(response => response.json()).then(categorias => {
-    categorias.forEach((categoria, numeroBtn) => {
-        const blocoProduto = carregaBlocoCategoria(categoria.SrcImagemPadrao,  categoria.titulo, categoria.descricao);
-        contProdutos.insertAdjacentElement('beforeend', blocoProduto);
-        carregaBtns(categoria, numeroBtn);
-    });
+    const posicaoLista = sessionStorage.getItem("localPage");
+    if(posicaoLista === null) {
+        categorias.forEach((categoria, i) => {                
+            const blocoProduto = carregaBlocoCategoria(categoria.SrcImagemPadrao, categoria.titulo, categoria.descricao);
+            contProdutos.insertAdjacentElement('beforeend', blocoProduto);        
+            carregaBtns(categoria, i);
+        });
+    }else {
+        console.log("s");
+        sessionStorage.removeItem("localPage");
+        // contProdutos.style = "display: none";
+        carregaSubTela(categorias[Number(posicaoLista)].listaPrdutos);
+
+    }
 }).catch(error => console.error('Erro:', error));
 
 function carregaBlocoCategoria(imgSrc, titulo, desc) {
@@ -24,7 +32,7 @@ function carregaBlocoCategoria(imgSrc, titulo, desc) {
         <div class="product_description">
             <h3>${titulo}</h3>
             <p>${desc}</p>
-            <button type="button" class="learn_more_product">
+            <button type="button" class="learn_more_product" id="learn_more">
                 <span>SAIBA MAIS</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="52" height="24" viewBox="0 0 52 24" fill="none">
                     <path d="M37.4356 1.73196L48.3261 12L37.4356 22.268L39.2725 24L52 12L39.2725 -1.35101e-06L37.4356 1.73196Z" fill="white"/>
@@ -35,6 +43,31 @@ function carregaBlocoCategoria(imgSrc, titulo, desc) {
     </div>
     `
     return engloba.firstElementChild;
+}
+
+function carregaBtns(categoria, numeroBtn) {
+    const blocoPrimario = document.querySelector(".category_product_block .category_name_block");
+    const btnsSaibaMais = document.querySelectorAll('#learn_more');
+    const listaProdutos = categoria.listaPrdutos;
+    btnsSaibaMais[numeroBtn].addEventListener('click', () => { 
+        contProdutos.style = "display: none";
+        document.querySelector(".category_product_block").style = "";
+        blocoPrimario.innerHTML = carregaBlocoPrimario(categoria.SrcImagemPadrao, categoria.titulo);
+        console.log(listaProdutos);
+        carregaSubTela(listaProdutos);
+    });
+}
+
+function carregaSubTela(listaProdutos) {
+    const blocoLista = document.querySelector(".itens_main_table .rows_boxs");
+    listaProdutos.forEach((produto) => {
+        const linhaProduto = carregaListaProdutos(produto.nome, produto.nomeQuimico, produto.nCas, produto.dados);
+        blocoLista.insertAdjacentElement('beforeend', linhaProduto);
+        const btn = linhaProduto.querySelector('.rows_boxs #see_more_btn');
+        btn.addEventListener('click', () => {
+            carregaVerMais(produto);
+        });
+    });
 }
 
 function carregaBlocoPrimario(imgSrc, titulo) {
@@ -63,28 +96,7 @@ function carregaListaProdutos(nome, nomeQuimico, nCas, dados) {
     return engloba.firstElementChild;
 }
 
-const blocoLista = document.querySelector(".itens_main_table .rows_boxs");
-const blocoPrimario = document.querySelector(".category_product_block .category_name_block");
-function carregaBtns(categoria, numeroBtn) {
-    const btnsSaibaMais = document.querySelectorAll('.item_block .learn_more_product');
-    const listaProdutos = categoria.listaPrdutos;
-    btnsSaibaMais[numeroBtn].addEventListener('click', () => {
-        contProdutos.style = "display: none";
-        document.querySelector(".category_product_block").style = "";
-        blocoPrimario.innerHTML = carregaBlocoPrimario(categoria.SrcImagemPadrao, categoria.titulo);
-        listaProdutos.forEach((produto) => {
-            const linhaProduto = carregaListaProdutos(produto.nome, produto.nomeQuimico, produto.nCas, produto.dados);
-            blocoLista.insertAdjacentElement('beforeend', linhaProduto);
-            const btn = linhaProduto.querySelector('.rows_boxs #see_more_btn');
-            btn.addEventListener('click', () => {
-                carregaVerMais(produto);
-            })
-        });
-    });
-}
-
 // VER MAIS DE CADA PRODUTO
-
 function carregaMaisInfos(nome, dados, nomeCompleto, nomeQuimico, nCas, aplicacoes) {
     let engloba = document.createElement("div");
     engloba.innerHTML = `

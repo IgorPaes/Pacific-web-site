@@ -1,17 +1,19 @@
 import navegacoes from '../geral/js/navegacoes.js';
+// import carregaBtns from '../geral/js/geraVReSB.js'
 navegacoes(1);
 
 const blocoCat = document.querySelector(".products_list");
 fetch('../geral/json/categorias.json')
 .then(response => response.json()).then(categorias => {
-    categorias.forEach((categoria) => {
+    categorias.forEach((categoria, i) => {
         if(categoria.ativoInicial) {            
-            const item = criaBlocoCat(categoria);
-            blocoCat.insertAdjacentElement('beforeend', item);
+            const blocoGerado = criaBlocoCat(categoria);
+            blocoCat.insertAdjacentElement('beforeend', blocoGerado);
+            carregaBtnsSM(i);
         }
     });
 }).catch(error => console.error('Erro:', error));
-{/* <img src="../geral/assets/packaging.png" alt="Embalagem"></img> */}
+
 function criaBlocoCat(categoria) {
     const div = document.createElement('div');
     div.innerHTML = `
@@ -29,9 +31,17 @@ function criaBlocoCat(categoria) {
             </div>
             <div class="bar"></div>
             <p>${categoria.descricao}</p>
-            <button type="button">Saiba Mais</button>
+            <button type="button" id="learn_more">Saiba Mais</button>
         </div>
     </div>
     `
     return div.firstElementChild;
+}
+
+function carregaBtnsSM(posicaoLista) {
+    const listaBtns = document.querySelectorAll('button#learn_more');
+    listaBtns[posicaoLista].addEventListener('click', () => {
+        sessionStorage.setItem('localPage', posicaoLista);
+        window.location.href = "/produtos/produtos.html";
+    });
 }
