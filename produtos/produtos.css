@@ -97,6 +97,7 @@
     font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: .25rem;
+    text-align: center;
     transition: var(--tempo-transicao-padrao);
 
 }
@@ -222,6 +223,7 @@
 
     display: flex;
     justify-content: space-between;
+    min-height: 3.8rem;
     padding: .63rem .63rem .63rem 1.88rem;
 
 }
