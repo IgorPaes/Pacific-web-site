@@ -1,5 +1,4 @@
 import navegacoes from '../geral/js/navegacoes.js';
-// import carregaBtns from '../geral/js/geraVReSB.js'
 navegacoes(1);
 
 const blocoCat = document.querySelector(".products_list");

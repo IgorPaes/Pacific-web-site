@@ -12,11 +12,13 @@ fetch('../geral/json/categorias.json')
             carregaBtns(categoria, i);
         });
     }else {
-        console.log("s");
         sessionStorage.removeItem("localPage");
-        // contProdutos.style = "display: none";
-        carregaSubTela(categorias[Number(posicaoLista)].listaPrdutos);
-
+        contProdutos.style = "display: none";
+        document.querySelector(".category_product_block").style = "";
+        const blocoPrimario = document.querySelector(".category_product_block .category_name_block");
+        const categoria = categorias[Number(posicaoLista)];
+        blocoPrimario.innerHTML = carregaBlocoPrimario(categoria.SrcImagemPadrao, categoria.titulo);
+        carregaSubTela(categoria.listaPrdutos);
     }
 }).catch(error => console.error('Erro:', error));
 
@@ -53,7 +55,6 @@ function carregaBtns(categoria, numeroBtn) {
         contProdutos.style = "display: none";
         document.querySelector(".category_product_block").style = "";
         blocoPrimario.innerHTML = carregaBlocoPrimario(categoria.SrcImagemPadrao, categoria.titulo);
-        console.log(listaProdutos);
         carregaSubTela(listaProdutos);
     });
 }
