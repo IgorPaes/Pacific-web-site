@@ -1,6 +1,115 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;700;800&display=swap');
 
-/* ------------------------------------------------ */
+/* --------------- LISTA DE CATEGORIAS - SOBRE --------------- */
+
+.main_container .categorys_block {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    column-gap: 2.5rem;
+    row-gap: 5rem;
+    padding: 24.88rem 5.2% 15.315rem 5.2%;
+
+}
+
+.categorys_block .item_block {
+
+    width: 25rem;
+    height: min-content;
+    background-color: var(--cor-azul-claro);
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, .25);
+    padding: 0 1.56rem 1.56rem 1.56rem;
+
+}
+
+.item_block .product_imagem_block {
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 19.5625rem;
+
+}
+
+.item_block .product_imagem_block figure {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -31px;
+    width: 100%;
+    height: 100%;
+    background: var(--cor-azul-escuro);
+
+}
+
+.item_block .product_description {
+
+    display: grid;
+    place-items: center;
+
+}
+
+.item_block .product_description h3 {
+
+    min-height: 28px;
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: .1875rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: .7rem;
+
+}
+
+.item_block .product_description p {
+
+    max-width: 20rem;
+    min-height: 28px;
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: .1425rem;
+    word-break: break-all;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.item_block .product_description button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3.875rem;
+    margin-top: 2.26rem;
+    background-color: var(--cor-azul-escuro);
+    gap: 8%;
+
+}
+
+.item_block .product_description button span {
+
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: .25rem;
+    text-align: center;
+    transition: var(--tempo-transicao-padrao);
+
+}
+
+.item_block .product_description button:hover span {
+
+    letter-spacing: .15rem;
+
+}
+
+/* ---------- LOGISTICA ---------- */
 
 .main_title_box {
 
@@ -12,7 +121,6 @@
     padding: 23.13rem 1rem 0 1rem;
 
 }
-
 
 .main_title_box h1 {
 
@@ -48,3 +156,6 @@
     width: 100%;
 
 }
+
+/* -------------------------------- */
+
