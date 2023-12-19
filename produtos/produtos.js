@@ -7,7 +7,7 @@ fetch('../geral/json/categorias.json')
     const posicaoLista = sessionStorage.getItem("localPage");
     if(posicaoLista === null) {
         categorias.forEach((categoria, i) => {                
-            const blocoProduto = carregaBlocoCategoria(categoria.SrcImagemPadrao, categoria.titulo, categoria.descricao);
+            const blocoProduto = carregaBlocoCategoria(categoria.srcImagemPadrao, categoria.titulo, categoria.descricao);
             contProdutos.insertAdjacentElement('beforeend', blocoProduto);        
             carregaBtns(categoria, i);
         });
@@ -17,7 +17,7 @@ fetch('../geral/json/categorias.json')
         document.querySelector(".category_product_block").style = "";
         const blocoPrimario = document.querySelector(".category_product_block .category_name_block");
         const categoria = categorias[Number(posicaoLista)];
-        blocoPrimario.innerHTML = carregaBlocoPrimario(categoria.SrcImagemPadrao, categoria.titulo);
+        blocoPrimario.innerHTML = carregaBlocoPrimario(categoria.srcImagemPadrao, categoria.titulo);
         carregaSubTela(categoria.listaPrdutos);
     }
 }).catch(error => console.error('Erro:', error));
@@ -54,7 +54,7 @@ function carregaBtns(categoria, numeroBtn) {
     btnsSaibaMais[numeroBtn].addEventListener('click', () => { 
         contProdutos.style = "display: none";
         document.querySelector(".category_product_block").style = "";
-        blocoPrimario.innerHTML = carregaBlocoPrimario(categoria.SrcImagemPadrao, categoria.titulo);
+        blocoPrimario.innerHTML = carregaBlocoPrimario(categoria.srcImagemPadrao, categoria.titulo);
         carregaSubTela(listaProdutos);
     });
 }

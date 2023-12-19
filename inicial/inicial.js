@@ -18,7 +18,7 @@ function criaBlocoCat(categoria) {
     div.innerHTML = `
     <div class="item_box">
         <div class="item_image">
-            <img src="${categoria.SrcImagemInicial}" alt="Imagem">
+            <img src="${categoria.srcImagemInicial}" alt="Imagem">
         </div>
         <div class="main_item_information">
             <h2>${categoria.titulo}</h2>
