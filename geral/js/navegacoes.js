@@ -5,6 +5,7 @@ export default function navegacoes(selecionado) {
     blockNavInferiro.innerHTML = navInferior();
     selecionaPagina(selecionado);
     carregaDrop();
+    localStorage.setItem('lang', "PT-BR");
     document.querySelector('.top_header_box > figure img').addEventListener('click', () => {
         location.reload();
     });
@@ -30,6 +31,7 @@ function carregaDrop() {
                     document.querySelector('#ti_select span').textContent = ultTxt.textContent;
                     ultImg.setAttribute("src", salvaImgPrincipal);
                     ultTxt.textContent = salvaTxtPrincipal;
+                    capturaSalvaLingua();
                 
                     listaSelect.style.display = 'none';
                 });
@@ -41,6 +43,19 @@ function carregaDrop() {
             });
         }
     });
+}
+
+// TERMINAR DEPOIS O SALVAMENTO DA LINGUA
+function capturaSalvaLingua() {
+    
+    let salvaFormatoLang;
+    
+    const salvaImgPrincipal = document.querySelector('#ti_select img').getAttribute("src");
+    const salvaTxtPrincipal = document.querySelector('#ti_select span').textContent;
+    
+
+    localStorage.setItem('lang', salvaTxtPrincipal);
+
 }
 
 function navSuperior() {
