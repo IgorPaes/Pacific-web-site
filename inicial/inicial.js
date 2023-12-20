@@ -2,7 +2,7 @@ import navegacoes from '../geral/js/navegacoes.js';
 navegacoes(1);
 
 const blocoCat = document.querySelector(".products_list");
-fetch('../geral/json/categorias.json')
+fetch('../geral/jsons/categorias.json')
 .then(response => response.json()).then(categorias => {
     categorias.forEach((categoria, i) => {
         if(categoria.ativoInicial) {            

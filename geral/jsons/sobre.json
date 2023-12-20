@@ -1,0 +1,22 @@
+[
+    {
+        "srcImagem": "...",
+        "titulo": "NOSSA EMPRESA",
+        "descricao": "CONHEÇA UM POUCO MAIS SOBRE NOSSA EMPRESA, NOSSA VISÕES, PRINCIPIOS E MUITO MAIS"
+    },
+    {
+        "srcImagem": "...",
+        "titulo": "LOGISTICA",
+        "descricao": "FIQUE POR DENTRO DO NOSSO MEIO DE LOGISTICA, E FORMAS DE ENTREGA."
+    },
+    {
+        "srcImagem": "...",
+        "titulo": "AONDE ESTAMOS",
+        "descricao": "SAIBA AONDE NOSSA EMPRESA ESTA LOCALIZADA, E ONDE PODE NOS ENCONTRAR."
+    },
+    {
+        "srcImagem": "...",
+        "titulo": "POLÍTICAS",
+        "descricao": "CONHEÇA NOSSAS POLÍTICAS DE PRIVACIDADE E NOSSOS TERMOS GERAIS."
+    }
+]
