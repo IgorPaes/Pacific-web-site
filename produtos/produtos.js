@@ -2,7 +2,7 @@ import navegacoes from '../geral/js/navegacoes.js';
 navegacoes(2);
 
 const contProdutos = document.querySelector('.category_block');
-fetch('../geral/jsons/categorias.json')
+fetch('../geral/jsons/produtos.json')
 .then(response => response.json()).then(categorias => {
     const posicaoLista = sessionStorage.getItem("localPage");
     if(posicaoLista === null) {
