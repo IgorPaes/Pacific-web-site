@@ -9,100 +9,100 @@
             {
                 "nome": "ATBC",
                 "nomeQuimico": "C20H34O8",
-                "nCas": "77-90-7",
-                "dados": "Baixa volatilidade",
+                "ncm": "Baixa volatilidade",
                 "verMais": {
                     "dados": "• ATBC (Citrato de Acetil Tributil) é um grau supremo de plastificante não tóxico e seguro sem ftalato. Está em conformidade com os requisitos relevantes de alimentos, agentes farmacêuticos para o corpo humano no regulamento da UE REACH e FDA.<br><br> • Excelente inter-miscibilidade e alta eficiência de plastificação.<br><br> • Excelente inter-miscibilidade e alta eficiência de plastificação.<br><br> • Forte resistência às intempéries<br><br> • Melhora efetivamente a ductilidade do produto<br><br> • Boa biodegradabilidade, de acordo com os padrões da Organização para Cooperação e Desenvolvimento Econômico (OCDE)",
                     "nomeCompleto": "Citrato de Acetil Tributil", 
-                    "aplicacoes": "• Granulação/filme de PVC não tóxico <br><br> • Recipiente de embalagem de alimentos e almofada de vedação<br><br> • Produtos médicos de plástico<br><br> • brinquedos para crianças<br><br> • Couro artificial de PVC, papel de parede"
+                    "aplicacoes": "• Granulação/filme de PVC não tóxico <br><br> • Recipiente de embalagem de alimentos e almofada de vedação<br><br> • Produtos médicos de plástico<br><br> • brinquedos para crianças<br><br> • Couro artificial de PVC, papel de parede",
+                    "nCas": "77-90-7"
                 }
             },
             {
                 "nome": "DBM",
                 "nomeQuimico": "C20H34O8",
-                "nCas": "77-90-7",
-                "dados": "Baixa volatilidade",
+                "ncm": "Baixa volatilidade",
                 "verMais": {
                     "dados": "",
                     "nomeCompleto": "", 
-                    "aplicacoes": ""
+                    "aplicacoes": "",
+                    "nCas": "77-90-7"
                 }
             },
             {
                 "nome": "DPHP",
                 "nomeQuimico": "C20H34O8",
-                "nCas": "77-90-7",
-                "dados": "Baixa volatilidade",
+                "ncm": "Baixa volatilidade",
                 "verMais": {
                     "dados": "",
                     "nomeCompleto": "", 
-                    "aplicacoes": ""
+                    "aplicacoes": "",
+                    "nCas": "77-90-7"
                 }
             },
             {
                 "nome": "DOP",
                 "nomeQuimico": "C20H34O8",
-                "nCas": "77-90-7",
-                "dados": "Baixa volatilidade",
+                "ncm": "Baixa volatilidade",
                 "verMais": {
                     "dados": "",
                     "nomeCompleto": "", 
-                    "aplicacoes": ""
+                    "aplicacoes": "",
+                    "nCas": "77-90-7"
                 }
             },
             {
                 "nome": "DIDA",
                 "nomeQuimico": "DI ISO DECYLADIPATE",
-                "nCas": "77-90-7",
-                "dados": "Baixa volatilidade",
+                "ncm": "Baixa volatilidade",
                 "verMais": {
                     "dados": "",
                     "nomeCompleto": "", 
-                    "aplicacoes": ""
+                    "aplicacoes": "",
+                    "nCas": "77-90-7"
                 }
             },
             {
                 "nome": "DINP",
                 "nomeQuimico": "C20H34O8",
-                "nCas": "77-90-7",
-                "dados": "Baixa volatilidade",
+                "ncm": "Baixa volatilidade",
                 "verMais": {
                     "dados": "",
                     "nomeCompleto": "", 
-                    "aplicacoes": ""
+                    "aplicacoes": "",
+                    "nCas": "77-90-7"
                 }
             },
             {
                 "nome": "DOCH",
                 "nomeQuimico": "C20H34O8",
-                "nCas": "77-90-7",
-                "dados": "Baixa volatilidade",
+                "ncm": "Baixa volatilidade",
                 "verMais": {
                     "dados": "",
                     "nomeCompleto": "", 
-                    "aplicacoes": ""
+                    "aplicacoes": "",
+                    "nCas": "77-90-7"
                 }
             },
             {
                 "nome": "DOA",
                 "nomeQuimico": "C20H34O8",
-                "nCas": "77-90-7",
-                "dados": "Baixa volatilidade",
+                "ncm": "Baixa volatilidade",
                 "verMais": {
                     "dados": "",
                     "nomeCompleto": "", 
-                    "aplicacoes": ""
+                    "aplicacoes": "",
+                    "nCas": "77-90-7"
                 }
             },
             {
                 "nome": "DOM",
                 "nomeQuimico": "C20H34O8",
-                "nCas": "77-90-7",
-                "dados": "Baixa volatilidade",
+                "ncm": "Baixa volatilidade",
                 "verMais": {
                     "dados": "",
                     "nomeCompleto": "", 
-                    "aplicacoes": ""
+                    "aplicacoes": "",
+                    "nCas": "77-90-7"
                 }
             }
         ]
@@ -118,23 +118,23 @@
             {
                 "nome": "",
                 "nomeQuimico": "",
-                "nCas": "",
-                "dados": "",
+                "ncm": "Baixa volatilidade",
                 "verMais": {
                     "dados": "",
                     "nomeCompleto": "", 
-                    "aplicacoes": ""
+                    "aplicacoes": "",
+                    "nCas": "77-90-7"
                 }
             },
             {
                 "nome": "",
                 "nomeQuimico": "",
-                "nCas": "",
-                "dados": "",
+                "ncm": "Baixa volatilidade",
                 "verMais": {
                     "dados": "",
                     "nomeCompleto": "", 
-                    "aplicacoes": ""
+                    "aplicacoes": "",
+                    "nCas": "77-90-7"
                 }
             }
         ]

@@ -62,7 +62,7 @@ function carregaBtns(categoria, numeroBtn) {
 function carregaSubTela(listaProdutos) {
     const blocoLista = document.querySelector(".itens_main_table .rows_boxs");
     listaProdutos.forEach((produto) => {
-        const linhaProduto = carregaListaProdutos(produto.nome, produto.nomeQuimico, produto.nCas, produto.dados);
+        const linhaProduto = carregaListaProdutos(produto.nome, produto.nomeQuimico, produto.ncm);
         blocoLista.insertAdjacentElement('beforeend', linhaProduto);
         const btn = linhaProduto.querySelector('.rows_boxs #see_more_btn');
         btn.addEventListener('click', () => {
@@ -83,14 +83,13 @@ function carregaBlocoPrimario(imgSrc, titulo) {
     `
 }
 
-function carregaListaProdutos(nome, nomeQuimico, nCas, dados) {
+function carregaListaProdutos(nome, nomeQuimico, ncm) {
     let engloba = document.createElement("div");
     engloba.innerHTML = `
     <li>
         <span>${nome}</span>
         <span>${nomeQuimico}</span>
-        <span>${nCas}</span>
-        <span>${dados}</span>
+        <span>${ncm}</span>
         <button id="see_more_btn">VER MAIS</button>
     </li>
     `
@@ -124,7 +123,7 @@ function carregaMaisInfos(nome, dados, nomeCompleto, nomeQuimico, nCas, aplicaco
 
 function carregaVerMais(produto) {
     const infosProduto = produto.verMais;
-    const blocoInfosProd = carregaMaisInfos(produto.nome, infosProduto.dados, infosProduto.nomeCompleto, produto.nomeQuimico, produto.nCas, infosProduto.aplicacoes);
+    const blocoInfosProd = carregaMaisInfos(produto.nome, infosProduto.dados, infosProduto.nomeCompleto, produto.nomeQuimico, infosProduto.nCas, infosProduto.aplicacoes);
     document.querySelector(".category_product_block").style = "display: none";
     document.querySelector(".block_see_more").style = "display: block";
     const blocoInfos = document.querySelector(".block_see_more .see_more_background");
