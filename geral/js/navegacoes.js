@@ -5,57 +5,91 @@ export default function navegacoes(selecionado) {
     blockNavInferiro.innerHTML = navInferior();
     selecionaPagina(selecionado);
     carregaDrop();
-    localStorage.setItem('lang', "PT-BR");
+    // localStorage.setItem('lang', "PT-BR");
     document.querySelector('.top_header_box > figure img').addEventListener('click', () => {
         location.reload();
     });
 }
 
+// let formatoLang = salvaFormato();
 function carregaDrop() {
     let primeiroClick = true;
-    document.getElementById("drop_block").addEventListener('click', () => {
+    document.querySelector("#ti_select").addEventListener('click', () => {
         document.querySelector('#icon_box_id svg').classList.toggle('ativo');
-        const listaSelect = document.getElementById('select_list');
-        listaSelect.style.display = (listaSelect.style.display === 'flex') ? 'none' : 'flex';
+        const lista = document.getElementById('select_list');
+        lista.classList.toggle('flexToggle');
         if(primeiroClick) {
             primeiroClick = false;
-            const opcoes = listaSelect.querySelectorAll('#select_list li');
-            opcoes.forEach((opcao) => {        
-                opcao.addEventListener('click', () => {
-                    const salvaImgPrincipal = document.querySelector('#ti_select img').getAttribute("src");
-                    const salvaTxtPrincipal = document.querySelector('#ti_select span').textContent;
-                    const ultImg = opcao.querySelector('img');
-                    const ultTxt = opcao.querySelector('span');
-                    
-                    document.querySelector('#ti_select img').setAttribute("src", ultImg.getAttribute("src"));
-                    document.querySelector('#ti_select span').textContent = ultTxt.textContent;
-                    ultImg.setAttribute("src", salvaImgPrincipal);
-                    ultTxt.textContent = salvaTxtPrincipal;
-                    capturaSalvaLingua();
-                
-                    listaSelect.style.display = 'none';
-                });
-            });
+            fetch('../geral/jsons/linguas.json')
+            .then(response => response.json()).then(blocoLinguas => {
+                carregaListaLinguas(blocoLinguas);
+            }).catch(error => console.error('Erro:', error));
             document.addEventListener('click', (event) => {
-                if(event.target.classList[0] === 'main_container') {
-                    listaSelect.style.display = 'none';
+                if(event.target.classList[0] != undefined && event.target.classList[0] != 'icone_txt_select') {
+                    lista.classList.remove('flexToggle');
                 }
             });
         }
     });
 }
 
+function carregaListaLinguas(blocoLinguas) {
+    const caixaLinguas = document.querySelector('#select_list');
+    const linguaSelecionada = document.querySelector('#ti_select span').textContent;
+    blocoLinguas.forEach((lingua) => {
+        if(linguaSelecionada != lingua.lingua) {
+            const blocoLingua = carregaLinguas(lingua.lingua, lingua.srcBandeira);
+            caixaLinguas.insertAdjacentElement('beforeend', blocoLingua);
+            blocoLingua.addEventListener('click', () => {
+                const txt = document.querySelector('#ti_select span');
+                const img = document.querySelector('#ti_select img');
+                txt.textContent = lingua.lingua;
+                img.setAttribute("src", lingua.srcBandeira);
+                caixaLinguas.innerHTML = '';
+                carregaListaLinguas(blocoLinguas);
+                document.getElementById('select_list').style.display = 'none';
+            });
+        }
+    });
+}
+
 // TERMINAR DEPOIS O SALVAMENTO DA LINGUA
-function capturaSalvaLingua() {
-    
-    let salvaFormatoLang;
-    
-    const salvaImgPrincipal = document.querySelector('#ti_select img').getAttribute("src");
-    const salvaTxtPrincipal = document.querySelector('#ti_select span').textContent;
-    
+function salvaFormato() {
 
-    localStorage.setItem('lang', salvaTxtPrincipal);
+    
+    
+    // let salvaFormatoLang = [];
 
+    // const TxtPrincipal = document.querySelector('#ti_select span').textContent;
+    // const TxtsSecundarios = document.querySelectorAll('#select_list span');
+
+    // const linhaTexto = [TxtPrincipal];
+    // TxtsSecundarios.forEach(item => {
+    //     linhaTexto.push(item.textContent);
+    // });
+    // salvaFormatoLang.push(linhaTexto);
+
+    // const ImgPrincipal = document.querySelector('#ti_select img').getAttribute("src");
+    // const ImgsSecundarias = document.querySelectorAll('#select_list img');
+
+    // const linhaImagem = [ImgPrincipal];
+    // ImgsSecundarias.forEach(item => {
+    //     linhaImagem.push(item.getAttribute("src"));
+    // });
+    // salvaFormatoLang.push(linhaImagem);
+
+    // localStorage.setItem('lang', salvaFormatoLang);
+}
+
+function carregaLinguas(nome, imgSrc) {
+    const div = document.createElement('div');
+    div.innerHTML = `
+        <li>
+            <img src="${imgSrc}">
+            <span>${nome}</span>
+        </li>
+    `
+    return div.firstElementChild;
 }
 
 function navSuperior() {
@@ -99,18 +133,7 @@ function navSuperior() {
                 </div>
             </div>
             <div class="select_itens" id="select_list">
-                <li>
-                    <img src="../geral/assets/Usa.png">
-                    <span>EN</span>
-                </li>
-                <li>
-                    <img src="../geral/assets/Espanha.png">
-                    <span>ES</span>
-                </li>
-                <li>
-                    <img src="../geral/assets/China.png">
-                    <span>ZH</span>
-                </li>
+
             </div>
         </div>
     `
