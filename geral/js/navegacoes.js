@@ -5,81 +5,61 @@ export default function navegacoes(selecionado) {
     blockNavInferiro.innerHTML = navInferior();
     selecionaPagina(selecionado);
     carregaDrop();
-    // localStorage.setItem('lang', "PT-BR");
     document.querySelector('.top_header_box > figure img').addEventListener('click', () => {
         location.reload();
     });
 }
 
-// let formatoLang = salvaFormato();
 function carregaDrop() {
-    let primeiroClick = true;
+    fetch('../geral/jsons/linguas.json')
+    .then(response => response.json()).then(blocoLinguas => {
+        carregaListaLinguas(blocoLinguas);
+    }).catch(error => console.error('Erro:', error));
+    const caixaLista = document.getElementById('select_list');
     document.querySelector("#ti_select").addEventListener('click', () => {
         document.querySelector('#icon_box_id svg').classList.toggle('ativo');
-        const lista = document.getElementById('select_list');
-        lista.classList.toggle('flexToggle');
-        if(primeiroClick) {
-            primeiroClick = false;
-            fetch('../geral/jsons/linguas.json')
-            .then(response => response.json()).then(blocoLinguas => {
-                carregaListaLinguas(blocoLinguas);
-            }).catch(error => console.error('Erro:', error));
-            document.addEventListener('click', (event) => {
-                if(event.target.classList[0] != undefined && event.target.classList[0] != 'icone_txt_select') {
-                    lista.classList.remove('flexToggle');
-                }
-            });
+        caixaLista.classList.toggle('flexToggle');
+    });
+    document.addEventListener('click', (event) => {
+        if(event.target.classList[0] != undefined && event.target.classList[0] != 'icone_txt_select') {
+            caixaLista.classList.remove('flexToggle');
         }
     });
 }
 
 function carregaListaLinguas(blocoLinguas) {
     const caixaLinguas = document.querySelector('#select_list');
-    const linguaSelecionada = document.querySelector('#ti_select span').textContent;
+    let validaLocal;
     blocoLinguas.forEach((lingua) => {
-        if(linguaSelecionada != lingua.lingua) {
+        // ARRUMAR AQUI
+        if(localStorage.getItem('lang') != lingua.lingua) {
+            validaLocal = true;
+            console.log(localStorage.getItem('lang') != lingua.lingua);
+            // SELECIONA LINGUA INICIAL PADRÃO.
+            // localStorage.setItem('lang', 'PT-BR');
+        }else {
+            console.log(localStorage.getItem('lang') != lingua.lingua);
+        }
+        const nomeLingua = document.querySelector('#ti_select span');
+        const bandeira = document.querySelector('#ti_select img');
+        if(localStorage.getItem('lang') != lingua.lingua) {
             const blocoLingua = carregaLinguas(lingua.lingua, lingua.srcBandeira);
             caixaLinguas.insertAdjacentElement('beforeend', blocoLingua);
             blocoLingua.addEventListener('click', () => {
-                const txt = document.querySelector('#ti_select span');
-                const img = document.querySelector('#ti_select img');
-                txt.textContent = lingua.lingua;
-                img.setAttribute("src", lingua.srcBandeira);
+                nomeLingua.textContent = lingua.lingua;
+                bandeira.setAttribute("src", lingua.srcBandeira);
+                localStorage.setItem('lang', nomeLingua.textContent);
                 caixaLinguas.innerHTML = '';
                 carregaListaLinguas(blocoLinguas);
                 document.getElementById('select_list').style.display = 'none';
             });
+        }else {
+            nomeLingua.textContent = lingua.lingua;
+            bandeira.setAttribute("src", lingua.srcBandeira);
         }
     });
 }
 
-// TERMINAR DEPOIS O SALVAMENTO DA LINGUA
-function salvaFormato() {
-
-    
-    
-    // let salvaFormatoLang = [];
-
-    // const TxtPrincipal = document.querySelector('#ti_select span').textContent;
-    // const TxtsSecundarios = document.querySelectorAll('#select_list span');
-
-    // const linhaTexto = [TxtPrincipal];
-    // TxtsSecundarios.forEach(item => {
-    //     linhaTexto.push(item.textContent);
-    // });
-    // salvaFormatoLang.push(linhaTexto);
-
-    // const ImgPrincipal = document.querySelector('#ti_select img').getAttribute("src");
-    // const ImgsSecundarias = document.querySelectorAll('#select_list img');
-
-    // const linhaImagem = [ImgPrincipal];
-    // ImgsSecundarias.forEach(item => {
-    //     linhaImagem.push(item.getAttribute("src"));
-    // });
-    // salvaFormatoLang.push(linhaImagem);
-
-    // localStorage.setItem('lang', salvaFormatoLang);
-}
 
 function carregaLinguas(nome, imgSrc) {
     const div = document.createElement('div');
