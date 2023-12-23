@@ -29,37 +29,27 @@ function carregaDrop() {
 
 function carregaListaLinguas(blocoLinguas) {
     const caixaLinguas = document.querySelector('#select_list');
-    let validaLocal;
-    blocoLinguas.forEach((lingua) => {
-        // ARRUMAR AQUI
-        if(localStorage.getItem('lang') != lingua.lingua) {
-            validaLocal = true;
-            console.log(localStorage.getItem('lang') != lingua.lingua);
-            // SELECIONA LINGUA INICIAL PADRÃO.
-            // localStorage.setItem('lang', 'PT-BR');
-        }else {
-            console.log(localStorage.getItem('lang') != lingua.lingua);
-        }
+    checkaLinguagemLocal(blocoLinguas);
+    blocoLinguas.forEach((linguagem) => {
         const nomeLingua = document.querySelector('#ti_select span');
         const bandeira = document.querySelector('#ti_select img');
-        if(localStorage.getItem('lang') != lingua.lingua) {
-            const blocoLingua = carregaLinguas(lingua.lingua, lingua.srcBandeira);
+        if(localStorage.getItem('lang') != linguagem.lingua) {
+            const blocoLingua = carregaLinguas(linguagem.lingua, linguagem.srcBandeira);
             caixaLinguas.insertAdjacentElement('beforeend', blocoLingua);
             blocoLingua.addEventListener('click', () => {
-                nomeLingua.textContent = lingua.lingua;
-                bandeira.setAttribute("src", lingua.srcBandeira);
+                nomeLingua.textContent = linguagem.lingua;
+                bandeira.setAttribute("src", linguagem.srcBandeira);
                 localStorage.setItem('lang', nomeLingua.textContent);
                 caixaLinguas.innerHTML = '';
                 carregaListaLinguas(blocoLinguas);
                 document.getElementById('select_list').style.display = 'none';
             });
         }else {
-            nomeLingua.textContent = lingua.lingua;
-            bandeira.setAttribute("src", lingua.srcBandeira);
+            nomeLingua.textContent = linguagem.lingua;
+            bandeira.setAttribute("src", linguagem.srcBandeira);
         }
     });
 }
-
 
 function carregaLinguas(nome, imgSrc) {
     const div = document.createElement('div');
@@ -103,8 +93,8 @@ function navSuperior() {
         <div class="language_bar">
             <div class="select_block" id="drop_block">
                 <div class="icone_txt_select" id="ti_select">
-                    <img src="../geral/assets/Brasil.png">
-                    <span>PT-BR</span>
+                    <img src="">
+                    <span></span>
                 </div>
                 <div class="icon_box" id="icon_box_id">
                     <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
@@ -185,5 +175,15 @@ function selecionaPagina(selecionado) {
         return `
             <div class="txt_underline"></div>
         `
+    }
+}
+
+function checkaLinguagemLocal(blocoLinguas) {
+    let vecNomeLinguas = [];
+    blocoLinguas.forEach((linguagem) => {
+       vecNomeLinguas.push(linguagem.lingua);
+    });
+    if(!vecNomeLinguas.includes(localStorage.getItem('lang'))) {
+        localStorage.setItem('lang', "PT-BR");
     }
 }
