@@ -1,18 +1,35 @@
 [
     {
         "lingua": "PT-BR",
-        "srcBandeira": "https://media.discordapp.net/attachments/872565816602792038/1187510793688858634/Brasil.png?ex=6597269c&is=6584b19c&hm=3f50a3d25357f75cee3f7100c16e525d6dcd1c6369e4cda4a7f4fb91a4f783be&=&format=webp&quality=lossless&width=40&height=28",
-        "tituloInicial": "Atuando no mercado de plastificantes e resinas termoplásticas desde 1989.",
-        "descSecundaria": "A Pacifico atua no mercado nacional há mais de 30 anos com a industrialização de compostos termoplásticos. Desde o começo sempre priorizamos oferecer o melhor atendimento possível aos nossos clientes. Em 2019, a Pacífico expandiu-se como distribuidora de produtos químicos com a finalidade de suprir o mercado interno com a distribuição e importação de plastificantes e resinas termoplásticas.",
-        "btn1": "Saiba Mais",
-        "descCaixa1": "Conduzimos negócios de forma confiável e eficiente, resultando em clientes satisfeitos.",
-        "descCaixa2": "Nossa empresa possui certificação do ISO 9001:2015 e uma extensa trajetória de colaboração com os principais fornecedores do mercado",
-        "descCaixa3": "Somos uma referência tanto nacional quanto internacional no mercado de plastificantes e resinas termoplásticas de PVC."
+        "srcBandeira": "https://media.discordapp.net/attachments/872565816602792038/1187510793688858634/Brasil.png?ex=6597269c&is=6584b19c&hm=3f50a3d25357f75cee3f7100c16e525d6dcd1c6369e4cda4a7f4fb91a4f783be&=&format=webp&quality=lossless&width=40&height=28"
     },
     {
         "lingua": "EN",
-        "srcBandeira": "https://media.discordapp.net/attachments/872565816602792038/1187510793466564769/Usa.png?ex=6597269c&is=6584b19c&hm=a8dafe88afe85c4e4de0bae84a786c6b7f2df89077b5d8f7f777f6e82f763978&=&format=webp&quality=lossless&width=40&height=28"
-        
+        "srcBandeira": "https://media.discordapp.net/attachments/872565816602792038/1187510793466564769/Usa.png?ex=6597269c&is=6584b19c&hm=a8dafe88afe85c4e4de0bae84a786c6b7f2df89077b5d8f7f777f6e82f763978&=&format=webp&quality=lossless&width=40&height=28",
+        "navegacao": {
+            "txt1": "Home",
+            "txt2": "Products",
+            "txt3": "About Us",
+            "txt4": "Contact"
+        },
+        "paginaInicial": {
+            "tituloInicial": "Atuando no mercado de plastificantes e resinas termoplásticas desde 1989.",
+            "descSecundaria": "A Pacifico atua no mercado nacional há mais de 30 anos com a industrialização de compostos termoplásticos. Desde o começo sempre priorizamos oferecer o melhor atendimento possível aos nossos clientes. Em 2019, a Pacífico expandiu-se como distribuidora de produtos químicos com a finalidade de suprir o mercado interno com a distribuição e importação de plastificantes e resinas termoplásticas.",
+            "btn1": "Saiba Mais",
+            "descCaixa1": "Conduzimos negócios de forma confiável e eficiente, resultando em clientes satisfeitos.",
+            "descCaixa2": "Nossa empresa possui certificação do ISO 9001:2015 e uma extensa trajetória de colaboração com os principais fornecedores do mercado",
+            "descCaixa3": "Somos uma referência tanto nacional quanto internacional no mercado de plastificantes e resinas termoplásticas de PVC."
+        },
+        "paginaProdutos": {
+           
+        },
+        "paginaSobre": {
+          
+        },
+        "paginaContato": {
+            
+        }
+
     },
     {
         "lingua": "ES",

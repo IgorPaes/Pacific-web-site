@@ -1,3 +1,4 @@
+import traducaoPagina from '../geral/js/traducoes.js';
 export default function navegacoes(selecionado) {
     const blockNavSuperior = document.querySelector('.header_container');
     const blockNavInferiro = document.querySelector('.footer_container');
@@ -43,6 +44,7 @@ function carregaListaLinguas(blocoLinguas) {
                 caixaLinguas.innerHTML = '';
                 carregaListaLinguas(blocoLinguas);
                 document.getElementById('select_list').style.display = 'none';
+                traducaoPagina();
             });
         }else {
             nomeLingua.textContent = linguagem.lingua;
