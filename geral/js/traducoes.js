@@ -1,8 +1,27 @@
-export default function traducaoPagina(numeroPagina) {
-    if(localStorage.getItem('lang')) {
-        
-    }
+export default function traducaoPagina() {
+    let en, es, zh;
+    // SEPARA AS LINGUAS NO JSON
+    fetch('../geral/jsons/linguas.json')
+    .then(response => response.json()).then(blocoLinguas => {   
+        blocoLinguas.forEach((caixaLingua) => {
+            switch(caixaLingua.lingua) {
+                case 'EN':
+                    en = caixaLingua;
+                break;
+                case 'ES':
+                    es = caixaLingua;
+                break;
+                case 'ZH':
+                    zh = caixaLingua;
+                break;
+            }
+        });
+    }).catch(error => console.error('Erro:', error));
+    // CONTINUAR DAQUI... 
     switch(localStorage.getItem('lang')) {
+        case 'PT-BR':
+            location.reload();
+        break;
         case 'EN':
             
         break;
@@ -13,30 +32,16 @@ export default function traducaoPagina(numeroPagina) {
             
         break;
     }
-    fetch('../geral/jsons/linguas.json')
-    .then(response => response.json()).then(blocoLinguas => {    
-        // const nomePaginasNav = document.querySelectorAll('#nav_sup button span');
-        // nomePaginasNav[1].textContent = blocoLinguas
-        // console.log(blocoLinguas[1]);
-    blocoLinguas.forEach((lingua) => {
-        
-    });
-    }).catch(error => console.error('Erro:', error));
-
-    switch(numeroPagina) {
-        case 1:
-            inicial();
-        break;
-        case 2:
-            produtos();
-        break;
-        case 3:
-            sobre();
-        break;
-        case 4:
-            contato();
-        break;
+    if(window.location.href.includes("/inicial")) {
+        inicial();
+    }else if(window.location.href.includes("/produtos")){
+        produtos();
+    }else if(window.location.href.includes("/sobre")){
+        sobre();
+    }else if(window.location.href.includes("/contato")){
+        contato();
     }
+
 }
 
 function inicial() {
