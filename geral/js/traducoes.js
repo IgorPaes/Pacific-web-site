@@ -55,13 +55,17 @@ function inicial(linhasLingua) {
     const pi = linhasLingua.paginaInicial;
 
     document.querySelector('.main_title h1').textContent = pi.tituloInicial;
+    document.querySelector('.main_informations p').textContent = pi.descSecundaria;
+    document.querySelector('.main_informations button').textContent = pi.btn1;
 }
 
 function produtos(linhasLingua) {
     navs(linhasLingua);
     const pp = linhasLingua.paginaInicial;
 
-
+    document.querySelector('.main_title h1').textContent = pp.tituloInicial;
+    document.querySelector('.main_informations p').textContent = pp.descSecundaria;
+    document.querySelector('.main_informations button').textContent = pp.btn1;
 }
 
 function sobre(linhasLingua) {

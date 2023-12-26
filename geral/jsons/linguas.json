@@ -36,7 +36,9 @@
             "txt4": "Contact"
         },
         "paginaInicial": {
-            "tituloInicial": "Tradução em INGLÊS"
+            "tituloInicial": "Tradução em INGLÊS",
+            "descSecundaria": "Text",
+            "btn1": "Know More"
         },
         "paginaProdutos": {
            
@@ -53,7 +55,10 @@
         "lingua": "ES",
         "srcBandeira": "https://media.discordapp.net/attachments/872565816602792038/1187510794158624768/Espanha.png?ex=6597269c&is=6584b19c&hm=f1bb88d99193ffa9b00594e7d3d760996debeb7de6b4895e777b8b25647e792f&=&format=webp&quality=lossless&width=40&height=28",
         "navegacao": {
-
+            "txt1": "",
+            "txt2": "",
+            "txt3": "",
+            "txt4": ""
         },
         "paginaInicial": {
             "tituloInicial": "Tradução em ESPANHOL"
@@ -71,11 +76,18 @@
     {
         "lingua": "ZH",
         "srcBandeira": "https://media.discordapp.net/attachments/872565816602792038/1187510793915338904/China.png?ex=6597269c&is=6584b19c&hm=5ed95303a4e72d8932b3a6b3f6f34b50ae345d4f7ce4585634bed7af0ba7fab1&=&format=webp&quality=lossless&width=40&height=28",
-        "navegacao": {},
+        "navegacao": {
+            "txt1": "",
+            "txt2": "",
+            "txt3": "",
+            "txt4": ""
+        },
         "paginaInicial": {
             "tituloInicial": "Tradução em CHINES"
         },
-        "paginaProdutos": {},
+        "paginaProdutos": {
+
+        },
         "paginaSobre": {
           
         },
