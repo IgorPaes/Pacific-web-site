@@ -1,10 +1,14 @@
 export default function traducaoPagina() {
-    let en, es, zh;
-    // SEPARA AS LINGUAS NO JSON
+    let pt_br, en, es, zh;
     fetch('../geral/jsons/linguas.json')
-    .then(response => response.json()).then(blocoLinguas => {   
+    .then(response => response.json())
+    .then(blocoLinguas => {
+        // SEPARA AS LINGUAS NO JSON
         blocoLinguas.forEach((caixaLingua) => {
             switch(caixaLingua.lingua) {
+                case 'PT-BR':
+                    pt_br = caixaLingua;
+                break;
                 case 'EN':
                     en = caixaLingua;
                 break;
@@ -16,46 +20,73 @@ export default function traducaoPagina() {
                 break;
             }
         });
+        switch(localStorage.getItem('lang')) {
+            case 'PT-BR':
+                pagina(pt_br);
+            break;
+            case 'EN':
+                pagina(en);
+            break;
+            case 'ES':
+                pagina(es);
+            break;
+            case 'ZH':
+                pagina(zh);
+            break;
+        }
     }).catch(error => console.error('Erro:', error));
-    // CONTINUAR DAQUI... 
-    switch(localStorage.getItem('lang')) {
-        case 'PT-BR':
-            location.reload();
-        break;
-        case 'EN':
-            
-        break;
-        case 'ES':
-            
-        break;
-        case 'ZH':
-            
-        break;
+}
+
+function pagina(itensLingua) {        
+    if(window.location.href.includes('/inicial')) {
+        inicial(itensLingua);
+    }else if(window.location.href.includes('/produtos')){
+        produtos(itensLingua);
+    }else if(window.location.href.includes('/sobre')){
+        sobre(itensLingua);
+    }else if(window.location.href.includes('/contato')){
+        contato(itensLingua);
     }
-    if(window.location.href.includes("/inicial")) {
-        inicial();
-    }else if(window.location.href.includes("/produtos")){
-        produtos();
-    }else if(window.location.href.includes("/sobre")){
-        sobre();
-    }else if(window.location.href.includes("/contato")){
-        contato();
-    }
+}
+
+// FUNÇÕES COM OS QUERYSELECTORS...
+function inicial(linhasLingua) {
+    navs(linhasLingua);
+    const pi = linhasLingua.paginaInicial;
+
+    document.querySelector('.main_title h1').textContent = pi.tituloInicial;
+}
+
+function produtos(linhasLingua) {
+    navs(linhasLingua);
+    const pp = linhasLingua.paginaInicial;
+
 
 }
 
-function inicial() {
-    
+function sobre(linhasLingua) {
+    navs(linhasLingua);
+    const ps = linhasLingua.paginaInicial;
+
+
 }
 
-function produtos() {
+function contato(linhasLingua) {
+    navs(linhasLingua);
+    const pc = linhasLingua.paginaInicial;
     
+
 }
 
-function sobre() {
-    
-}
+function navs(linhasLingua) {
+    const tNav = linhasLingua.navegacao;
+    document.querySelector('#nav_sup #tInicio').textContent = tNav.txt1;
+    document.querySelector('#nav_sup #tProdutos').textContent = tNav.txt2;
+    document.querySelector('#nav_sup #tSobre').textContent = tNav.txt3;
+    document.querySelector('#nav_sup #tContato').textContent = tNav.txt4;
 
-function contato() {
-    
+    document.querySelector('#ft_nav #tInicio').textContent = tNav.txt1;
+    document.querySelector('#ft_nav #tProdutos').textContent = tNav.txt2;
+    document.querySelector('#ft_nav #tSobre').textContent = tNav.txt3;
+    document.querySelector('#ft_nav #tContato').textContent = tNav.txt4;
 }

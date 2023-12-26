@@ -1,4 +1,4 @@
-import traducaoPagina from '../geral/js/traducoes.js';
+import traducaoPagina from '../js/traducoes.js';
 export default function navegacoes(selecionado) {
     const blockNavSuperior = document.querySelector('.header_container');
     const blockNavInferiro = document.querySelector('.footer_container');
@@ -6,6 +6,7 @@ export default function navegacoes(selecionado) {
     blockNavInferiro.innerHTML = navInferior();
     selecionaPagina(selecionado);
     carregaDrop();
+    traducaoPagina();
     document.querySelector('.top_header_box > figure img').addEventListener('click', () => {
         location.reload();
     });
@@ -73,20 +74,20 @@ function navSuperior() {
             <nav class="top_nav" id="nav_sup">
                 <a href="../inicial/inicial.html">
                     <button>
-                        <span>Inicio</span>
+                        <span id="tInicio">Inicio</span>
                     </button>
                 </a>
                 <a href="../produtos/produtos.html">
                     <button>
-                        <span>Produtos</span>
+                        <span id="tProdutos">Produtos</span>
                     </button>
                 </a>
                 <a href="../sobre/sobre.html">
                     <button>
-                        <span>Sobre Nós</span>
+                        <span id="tSobre">Sobre Nós</span>
                     </button>
                 </a>
-                <a href="../contato/contato.html" target="_blank">
+                <a href="../contato/contato.html">
                     <button class="contact" id="tContato">CONTATO</button>
                 </a>
             </nav>
@@ -120,16 +121,16 @@ function navInferior() {
         </div>
         <nav class="footer_nav" id="ft_nav">
             <a href="../inicial/inicial.html">
-                <button>INICIO</button>
+                <button id="tInicio">INICIO</button>
             </a>
             <a href="../produtos/produtos.html">
-                <button>PRODUTOS</button>
+                <button id="tProdutos">PRODUTOS</button>
             </a>
             <a href="../sobre/sobre.html">
-                <button>SOBRE NÓS</button>
+                <button id="tSobre">SOBRE NÓS</button>
             </a>
-            <a href="../contato/contato.html" target="_blank">
-                <button>CONTATO</button>
+            <a href="../contato/contato.html">
+                <button id="tContato">CONTATO</button>
             </a>
         </nav>
         <div class="est_txt">
@@ -153,6 +154,7 @@ function selecionaPagina(selecionado) {
             buttonsNavSup[1].insertAdjacentHTML('afterbegin', iconeLogo());
             buttonsNavInf[1].classList.add('selecionado');
             buttonsNavInf[1].insertAdjacentHTML('beforeend', underline());
+
         break;
         case 3:
             buttonsNavSup[2].classList.add('selecionado');
@@ -163,6 +165,7 @@ function selecionaPagina(selecionado) {
         case 4:
             buttonsNavInf[3].classList.add('selecionado');
             buttonsNavInf[3].insertAdjacentHTML('beforeend', underline());
+                       console.log("12");
         break;
     }
     function iconeLogo() {

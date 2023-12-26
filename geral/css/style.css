@@ -141,6 +141,7 @@ ul {
     font-size: 1.25rem;
     color: var(--cor-azul-padrao);
     text-align: center;
+    text-transform: uppercase;
     background-color: var(--cor-branca-padrao);
     border-radius: .5rem;
     box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.25);
@@ -336,11 +337,11 @@ ul {
 .footer_container .footer_nav button {
 
     color: var(--cor-azul-claro-25);
-    color: rgba(49, 49, 208, 0.25);
     font-size: 1.5625rem;
     font-weight: 400;
     letter-spacing: .15625rem;
     text-align: center;
+    text-transform: uppercase;
 
 }
 

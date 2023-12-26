@@ -1,6 +1,6 @@
 import navegacoes from '../geral/js/navegacoes.js';
 navegacoes(1);
-console.log(window.location.pathname);
+
 const blocoCat = document.querySelector(".products_list");
 fetch('../geral/jsons/produtos.json')
 .then(response => response.json()).then(categorias => {
