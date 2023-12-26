@@ -147,25 +147,24 @@ function selecionaPagina(selecionado) {
             buttonsNavSup[0].classList.add('selecionado');
             buttonsNavSup[0].insertAdjacentHTML('afterbegin', iconeLogo());
             buttonsNavInf[0].classList.add('selecionado');
-            buttonsNavInf[0].insertAdjacentHTML('beforeend', underline());
+            buttonsNavInf[0].insertAdjacentHTML('afterend', underline());
         break;
         case 2:
             buttonsNavSup[1].classList.add('selecionado');
             buttonsNavSup[1].insertAdjacentHTML('afterbegin', iconeLogo());
             buttonsNavInf[1].classList.add('selecionado');
-            buttonsNavInf[1].insertAdjacentHTML('beforeend', underline());
+            buttonsNavInf[1].insertAdjacentHTML('afterend', underline());
 
         break;
         case 3:
             buttonsNavSup[2].classList.add('selecionado');
             buttonsNavSup[2].insertAdjacentHTML('afterbegin', iconeLogo());
             buttonsNavInf[2].classList.add('selecionado');
-            buttonsNavInf[2].insertAdjacentHTML('beforeend', underline());
+            buttonsNavInf[2].insertAdjacentHTML('afterend', underline());
         break;
         case 4:
             buttonsNavInf[3].classList.add('selecionado');
-            buttonsNavInf[3].insertAdjacentHTML('beforeend', underline());
-                       console.log("12");
+            buttonsNavInf[3].insertAdjacentHTML('afterend', underline());
         break;
     }
     function iconeLogo() {
