@@ -44,7 +44,7 @@ function carregaBtns(numeroBtn) {
 }
 
 function ativaDesativaTelas(numeroTela) {
-    document.querySelector(".main_container .categorys_block").style = "display: none";;
+    document.querySelector(".main_container .categorys_block").style = "display: none";
     switch(numeroTela) {
         case 1:
             document.querySelector("").style = "";
@@ -53,7 +53,7 @@ function ativaDesativaTelas(numeroTela) {
             document.querySelector("#logistics").style = "";
         break;
         case 3:
-            document.querySelector("").style = "";
+            document.querySelector("#location").style = "";
         break;
         case 4:
             document.querySelector("").style = "";
