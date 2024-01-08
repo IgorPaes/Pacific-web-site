@@ -312,26 +312,39 @@
 
 /* ---------- VER MAIS ---------- */
 
+.main_container .background_img {
+
+    position: absolute;
+    top: 0;
+    min-width: 100%;
+    height: 106.375rem;
+    background-image: url(../geral/assets/FilterImg.png);
+    z-index: -1;
+
+}
+
 .main_container .block_see_more {
 
     width: 100%;
-    padding: 16.55rem 6.25rem 0 6.25rem;
-    margin-bottom: 10rem;
+    position: relative;
+
 }
 
 .main_container .block_see_more .see_more_background {
 
     display: grid;
     gap: 4rem;
-    width: 100%;
+    width: auto;
     height: min-content;
     min-height: 5rem;
-    background-color: var(--cor-azul-claro);
-    border-radius: .9375rem;
-    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, .25);
+    border-radius: 3.125rem;
+    border: 2px solid rgba(255, 255, 255, .1);
+    background: linear-gradient(180deg, rgba(36, 36, 172, 0.00) 0%, rgba(36, 36, 172, 0.80) 122.52%);
+    box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, .15);
+    backdrop-filter: blur(17.5px);
+    margin: 16.55rem 6.25rem 0 6.25rem;
     padding: 3.56rem 3.35rem 7.5rem 3.35rem;
-    margin-bottom: 6.65rem;
-
+    z-index: 50;
 
 }
 
@@ -388,11 +401,28 @@
 
 /* ----- */
 
-/* .main_container .budget_block {
+.main_container .budget_block {
 
-    
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    background-color: var(--cor-branca-padrao);
+    border-radius: 3.125rem 3.125rem 0 0;
+    z-index: -1;
 
-} */
+}
+
+.main_container .budget_block .budget_background {
+
+    position: absolute;
+    top: -82px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-branca-padrao);
+    border-radius: 3.125rem 3.125rem 0 0;
+    padding: 10.25rem 6.56rem 4.12rem 6.56rem;
+
+}
 
 .main_container .budget_block h1 {
 
@@ -401,5 +431,6 @@
     text-align: center;
     letter-spacing: .625rem;
     text-transform: uppercase;
+    color: var(--cor-azul-claro);
 
 }
