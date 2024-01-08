@@ -312,21 +312,24 @@
 
 /* ---------- VER MAIS ---------- */
 
-.main_container .background_img {
-
-    position: absolute;
-    top: 0;
-    min-width: 100%;
-    height: 106.375rem;
-    background-image: url(../geral/assets/FilterImg.png);
-    z-index: -1;
-
-}
-
 .main_container .block_see_more {
 
     width: 100%;
     position: relative;
+
+}
+
+.main_container .block_see_more .background_img {
+
+    position: absolute;
+    top: -265px;
+    min-width: 100%;
+    height: 106.375rem;
+    background-image: url(../geral/assets/FilterImg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
 
 }
 
@@ -403,24 +406,17 @@
 
 .main_container .budget_block {
 
-    position: relative;
-    width: 100%;
-    height: 30rem;
-    background-color: var(--cor-branca-padrao);
-    border-radius: 3.125rem 3.125rem 0 0;
-    z-index: -1;
-
-}
-
-.main_container .budget_block .budget_background {
-
-    position: absolute;
+    /* position: relative;
     top: -82px;
+     */
     width: 100%;
     height: 100%;
     background-color: var(--cor-branca-padrao);
     border-radius: 3.125rem 3.125rem 0 0;
-    padding: 10.25rem 6.56rem 4.12rem 6.56rem;
+    padding: 10.25rem 6.56rem 7.255rem 6.56rem;
+    margin-top: -82px;
+    user-select: none;
+    z-index: -1;
 
 }
 
@@ -432,5 +428,85 @@
     letter-spacing: .625rem;
     text-transform: uppercase;
     color: var(--cor-azul-claro);
+
+}
+
+.main_container .budget_block .budget_form {
+
+    margin-top: 2.81rem;
+
+}
+
+.main_container .budget_block .budget_form .inputs_grid {
+
+    display: grid;
+    column-gap: 4%;
+    row-gap: 4.25rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 2.44rem;
+
+}
+
+.budget_block .budget_form .input_block {
+
+    display: flex;
+    flex-direction: column;
+    min-width: 20rem;
+
+}
+
+.budget_block .budget_form .input_block label {
+
+    color: var(--cor-azul-claro);
+    font-size: 1.5625rem;
+    font-weight: 700;
+    letter-spacing: .15625rem;
+    text-transform: uppercase;
+    margin-bottom: 1.19rem;
+
+}
+
+.budget_block .budget_form .input_block input {
+
+    width: 100%;
+    height: 5.75rem;
+    border-radius: .3125rem;
+    border-top: 2px solid rgba(255, 255, 255, .05);
+    border-left: 2px solid rgba(255, 255, 255, .05);
+    background: rgba(216, 216, 216, 0.25);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--cor-azul-escuro);
+    padding: 0 1rem 0 1.5rem;
+    
+}
+
+.budget_block .budget_form .btn_form_box {
+
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+}
+
+.budget_block .budget_form .btn_form_box button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 14.3125rem;
+    height: 2.9375rem;
+    background-color: var(--cor-azul-padrao);
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: .125rem;
+    border-radius: 6px;
+
+}
+
+.budget_block .budget_form .btn_form_box button:hover {
+
+    letter-spacing: .4rem;
 
 }
