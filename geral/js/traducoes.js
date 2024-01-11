@@ -71,12 +71,16 @@ function produtos(linhasLingua) {
     document.querySelector('.columns_titles #descColuna2').textContent = pp.descColuna2;
     document.querySelector('.columns_titles #descColuna3').textContent = pp.descColuna3;
     
+    document.querySelector('#productData').textContent = pp.productData;
+
     //ORÇAMENTO
+    document.querySelector('.budget_block h1').textContent = pp.orcamento.title;
+
     document.querySelector('.inputs_grid #name').textContent = pp.orcamento.name;
     document.querySelector('.inputs_grid #secName').textContent = pp.orcamento.secName;
     document.querySelector('.inputs_grid #email').textContent = pp.orcamento.email;
-    document.querySelector('.inputs_grid #tel').textContent = pp.orcamento.tel;
-    document.querySelector('.inputs_grid #amount').textContent = pp.orcamento.amount;
+    document.querySelector('.budget_form #tel').textContent = pp.orcamento.tel;
+    document.querySelector('.input_block #amount').textContent = pp.orcamento.amount;
 }
 
 function sobre(linhasLingua) {
