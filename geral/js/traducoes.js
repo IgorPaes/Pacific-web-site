@@ -87,6 +87,13 @@ function sobre(linhasLingua) {
     navs(linhasLingua);
     const ps = linhasLingua.paginaSobre;
 
+    //LOGISTICA
+    document.querySelector('.main_title_box h1').textContent = ps.logistics.title;
+    document.querySelector('.step_content #titleSubCategory1').textContent = ps.logistics.titleSubCategory;
+    document.querySelector('.step_content #pSubCategory1').textContent = ps.logistics.descriptionSubCategory;
+    document.querySelector('.step_content #titleSubCategory2').textContent = ps.logistics.titleSubCategory2;
+    document.querySelector('.step_content #pSubCategory2').textContent = ps.logistics.descriptionSubCategory2;
+
 
 }
 
