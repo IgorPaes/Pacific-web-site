@@ -132,3 +132,22 @@ function carregaVerMais(produto) {
         blocoInfos.insertAdjacentElement('beforeend', clone);
     }
 }
+
+
+document.querySelector('.btn_form_box button').addEventListener('click', () => {
+
+    const nome = document.querySelector('.input_block #name');
+    const secName = document.querySelector('.input_block #secName');
+    const email = document.querySelector('.input_block #email');
+    const telefone = document.querySelector('.input_block #tel');
+    const produto = document.querySelector('.input_block #amount');
+    const quantidade = document.querySelector('.input_block #product');
+
+    nome.value = '';
+    secName.value = '';
+    email.value = '';
+    telefone.value = '';
+    produto.value = '';
+    quantidade.value = '';
+
+});
