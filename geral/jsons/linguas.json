@@ -1,32 +1,32 @@
 [
     {
-        "lingua": "PT-BR",
-        "srcBandeira": "https://media.discordapp.net/attachments/872565816602792038/1187510793688858634/Brasil.png?ex=6597269c&is=6584b19c&hm=3f50a3d25357f75cee3f7100c16e525d6dcd1c6369e4cda4a7f4fb91a4f783be&=&format=webp&quality=lossless&width=40&height=28",
-        "navegacao": {
-            "txt1": "Inicio",
-            "txt2": "Produtos",
-            "txt3": "Sobre Nós",
-            "txt4": "Contato"
+        "language": "PT-BR",
+        "flag": "https://media.discordapp.net/attachments/872565816602792038/1187510793688858634/Brasil.png?ex=6597269c&is=6584b19c&hm=3f50a3d25357f75cee3f7100c16e525d6dcd1c6369e4cda4a7f4fb91a4f783be&=&format=webp&quality=lossless&width=40&height=28",
+        "navigation": {
+            "homeButton": "Inicio",
+            "productsButton": "Produtos",
+            "aboutButton": "Sobre Nós",
+            "contactButton": "Contato"
         },
-        "paginaInicial": {
-            "tituloInicial": "Atuando no mercado de plastificantes e resinas termoplásticas desde 1989.",
-            "descSecundaria": "A Pacifico atua no mercado nacional há mais de 30 anos com a industrialização de compostos termoplásticos. Desde o começo sempre priorizamos oferecer o melhor atendimento possível aos nossos clientes. Em 2019, a Pacífico expandiu-se como distribuidora de produtos químicos com a finalidade de suprir o mercado interno com a distribuição e importação de plastificantes e resinas termoplásticas.",
-            "btn1": "Saiba Mais",
-            "descCaixa1": "Conduzimos negócios de forma confiável e eficiente, resultando em clientes satisfeitos.",
-            "descCaixa2": "Nossa empresa possui certificação do ISO 9001:2015 e uma extensa trajetória de colaboração com os principais fornecedores do mercado",
-            "descCaixa3": "Somos uma referência tanto nacional quanto internacional no mercado de plastificantes e resinas termoplásticas de PVC."
+        "homePage": {
+            "title": "Atuando no mercado de plastificantes e resinas termoplásticas desde 1989.",
+            "descSecondary": "A Pacifico atua no mercado nacional há mais de 30 anos com a industrialização de compostos termoplásticos. Desde o começo sempre priorizamos oferecer o melhor atendimento possível aos nossos clientes. Em 2019, a Pacífico expandiu-se como distribuidora de produtos químicos com a finalidade de suprir o mercado interno com a distribuição e importação de plastificantes e resinas termoplásticas.",
+            "descBalloon1": "Conduzimos negócios de forma confiável e eficiente, resultando em clientes satisfeitos.",
+            "descBalloon2": "Nossa empresa possui certificação do ISO 9001:2015 e uma extensa trajetória de colaboração com os principais fornecedores do mercado",
+            "descBalloon3": "Somos uma referência tanto nacional quanto internacional no mercado de plastificantes e resinas termoplásticas de PVC.",
+            "button": "Saiba Mais"
         },
-        "paginaProdutos": {
-            "descColuna1": "NOME",
-            "descColuna2": "NOME QUÍMICO",
-            "descColuna3": "NCM",
+        "productPage": {
+            "descColumn1": "NOME",
+            "descColumn2": "NOME QUÍMICO",
+            "descColumn3": "NCM",
             "productData": "DADOS DO PRODUTO",
             "characteristics": "Características",
             "type": "TIPO:",
             "nameChemical": "NOME QUÍMICO:",
             "nCas": "Nº CAS:",
             "aplications": "Aplicações",
-            "orcamento": {
+            "budget": {
                 "title": "ORÇAMENTO",
                 "name": "NOME",
                 "secName": "SOBRENOME",
@@ -36,47 +36,47 @@
 
             }
         },
-        "paginaSobre": {
+        "aboutPage": {
             "logistics": {
                 "title": "Confira abaixo nossa logística de entrega, feita pensando na melhor experiência para o cliente.",
                 "titleSubCategory": "MATERIAL CHEGA AO PORTO BR",
                 "titleSubCategory2": "ENVIO AO CLIENTE BR",
-                "descriptionSubCategory": "Quando um material é adquirido de um fornecedor em um país e destinado a um cliente em outro, uma complexa jornada logística se inicia. Após a compra, o fornecedor prepara o envio, embalando o material e providenciando documentação de exportação. O material é despachado, passando por processos alfandegários no país de origem. Utilizando transporte marítimo, segue viagem até o país do cliente. Ao chegar, enfrenta processos de importação, antes de ser entregue pela empresa local ao destino final. Esta jornada envolve coordenação logística e pode enfrentar imprevistos que afetam o prazo de entrega, exigindo soluções rápidas para garantir o sucesso da operação.",
-                "descriptionSubCategory2": "Após a chegada do material em nosso depósito, damos início a uma etapa crucial de organização e preparação para a entrega ao cliente. Os itens são recebidos, verificados quanto à qualidade e quantidade, e armazenados de maneira adequada. Em seguida, é iniciado o processo de separação e embalagem específica para o envio ao cliente. Nossa equipe logística coordena a expedição, garantindo que os produtos sejam encaminhados diretamente ao cliente, respeitando prazos e requisitos acordados. Essa fase envolve cuidados com a segurança do produto, escolha do meio de transporte mais adequado e ações eficientes para assegurar a entrega pontual e satisfatória ao destinatário final. Nosso objetivo é garantir uma transição fluida do depósito até o cliente, mantendo a integridade e a qualidade dos produtos durante todo o processo."
+                "descSubCategory": "Quando um material é adquirido de um fornecedor em um país e destinado a um cliente em outro, uma complexa jornada logística se inicia. Após a compra, o fornecedor prepara o envio, embalando o material e providenciando documentação de exportação. O material é despachado, passando por processos alfandegários no país de origem. Utilizando transporte marítimo, segue viagem até o país do cliente. Ao chegar, enfrenta processos de importação, antes de ser entregue pela empresa local ao destino final. Esta jornada envolve coordenação logística e pode enfrentar imprevistos que afetam o prazo de entrega, exigindo soluções rápidas para garantir o sucesso da operação.",
+                "descSubCategory2": "Após a chegada do material em nosso depósito, damos início a uma etapa crucial de organização e preparação para a entrega ao cliente. Os itens são recebidos, verificados quanto à qualidade e quantidade, e armazenados de maneira adequada. Em seguida, é iniciado o processo de separação e embalagem específica para o envio ao cliente. Nossa equipe logística coordena a expedição, garantindo que os produtos sejam encaminhados diretamente ao cliente, respeitando prazos e requisitos acordados. Essa fase envolve cuidados com a segurança do produto, escolha do meio de transporte mais adequado e ações eficientes para assegurar a entrega pontual e satisfatória ao destinatário final. Nosso objetivo é garantir uma transição fluida do depósito até o cliente, mantendo a integridade e a qualidade dos produtos durante todo o processo."
             }
         },
-        "paginaContato": {
+        "contactPage": {
             
         }
     },
     {
-        "lingua": "EN",
-        "srcBandeira": "https://media.discordapp.net/attachments/872565816602792038/1187510793466564769/Usa.png?ex=6597269c&is=6584b19c&hm=a8dafe88afe85c4e4de0bae84a786c6b7f2df89077b5d8f7f777f6e82f763978&=&format=webp&quality=lossless&width=40&height=28",
-        "navegacao": {
-            "txt1": "Home",
-            "txt2": "Products",
-            "txt3": "About Us",
-            "txt4": "Contact"
+        "language": "EN",
+        "flag": "https://media.discordapp.net/attachments/872565816602792038/1187510793466564769/Usa.png?ex=6597269c&is=6584b19c&hm=a8dafe88afe85c4e4de0bae84a786c6b7f2df89077b5d8f7f777f6e82f763978&=&format=webp&quality=lossless&width=40&height=28",
+        "navigation": {
+            "homeButton": "Home",
+            "productsButton": "Products",
+            "aboutButton": "About Us",
+            "contactButton": "Contact"
         },
-        "paginaInicial": {
-            "tituloInicial": "Operating in the market of plasticizers and thermoplastic resins since 1989.",
-            "descSecundaria": "Pacifico has been operating in the national market for over 30 years with the industrialization of thermoplastic compounds. From the beginning, we have always prioritized offering the best possible service to our customers. In 2019, Pacifico expanded as a distributor of chemical products with the purpose of supplying the domestic market with the distribution and importation of plasticizers and thermoplastic resins.",
-            "btn1": "Learn More",
-            "descCaixa1": "We conduct business in a reliable and efficient way, resulting in satisfied customers.",
-            "descCaixa2": "Our company has ISO 9001:2015 certification and a long history of collaboration with the main suppliers in the market",
-            "descCaixa3": "We are a reference both nationally and internationally in the market of plasticizers and PVC thermoplastic resins."
+        "homePage": {
+            "title": "Operating in the market of plasticizers and thermoplastic resins since 1989.",
+            "descSecondary": "Pacifico has been operating in the national market for over 30 years with the industrialization of thermoplastic compounds. From the beginning, we have always prioritized offering the best possible service to our customers. In 2019, Pacifico expanded as a distributor of chemical products with the purpose of supplying the domestic market with the distribution and importation of plasticizers and thermoplastic resins.",
+            "button": "Learn More",
+            "descBalloon1": "We conduct business in a reliable and efficient way, resulting in satisfied customers.",
+            "descBalloon2": "Our company has ISO 9001:2015 certification and a long history of collaboration with the main suppliers in the market",
+            "descBalloon3": "We are a reference both nationally and internationally in the market of plasticizers and PVC thermoplastic resins."
         },
-        "paginaProdutos": {
-            "descColuna1": "NAME",
-            "descColuna2": "CHEMICAL NAME",
-            "descColuna3": "NCM",
+        "productPage": {
+            "descColumn1": "NAME",
+            "descColumn2": "CHEMICAL NAME",
+            "descColumn3": "NCM",
             "productData": "DADOS DO PRODUTO EN",
             "characteristics": "Características es",
             "type": "TIPO: es",
             "nameChemical": "NOME QUÍMICO: es",
             "nCas": "Nº CAS: es",
             "aplications": "Aplicações es",
-            "orcamento": {
+            "budget": {
                 "title": "INGLES",
                 "name": "NAME",
                 "secName": "SURNAME",
@@ -85,48 +85,48 @@
                 "amount": "QUANTITY"
             }
         },
-        "paginaSobre": {
+        "aboutPage": {
             "logistics": {
                 "title": "Confira abaixo nossa logística de entrega, feita pensando na melhor experiência para o cliente EN .",
                 "titleSubCategory": "MATERIAL CHEGA AO PORTO EN",
                 "titleSubCategory2": "ENVIO AO CLIENTE EN",
-                "descriptionSubCategory": "teste",
-                "descriptionSubCategory2": "TESTE"
+                "descSubCategory": "teste",
+                "descSubCategory2": "TESTE"
             }
         },
-        "paginaContato": {
+        "contactPage": {
             
         }
 
     },
     {
-        "lingua": "ES",
-        "srcBandeira": "https://media.discordapp.net/attachments/872565816602792038/1187510794158624768/Espanha.png?ex=6597269c&is=6584b19c&hm=f1bb88d99193ffa9b00594e7d3d760996debeb7de6b4895e777b8b25647e792f&=&format=webp&quality=lossless&width=40&height=28",
-        "navegacao": {
-            "txt1": "Inicio",
-            "txt2": "Productos",
-            "txt3": "Sobre Nosotros",
-            "txt4": "Contacto"
+        "language": "ES",
+        "flag": "https://media.discordapp.net/attachments/872565816602792038/1187510794158624768/Espanha.png?ex=6597269c&is=6584b19c&hm=f1bb88d99193ffa9b00594e7d3d760996debeb7de6b4895e777b8b25647e792f&=&format=webp&quality=lossless&width=40&height=28",
+        "navigation": {
+            "homeButton": "Inicio",
+            "productsButton": "Productos",
+            "aboutButton": "Sobre Nosotros",
+            "contactButton": "Contacto"
         },
-        "paginaInicial": {
-            "tituloInicial": "Actuando en el mercado de plastificantes y resinas termoplásticas desde 1989.",
-            "descSecundaria": "Pacifico ha estado operando en el mercado nacional durante más de 30 años con la industrialización de compuestos termoplásticos. Desde el principio, siempre hemos priorizado ofrecer el mejor servicio posible a nuestros clientes. En 2019, Pacifico se expandió como distribuidor de productos químicos con el propósito de abastecer el mercado interno con la distribución e importación de plastificantes y resinas termoplásticas.",
-            "btn1": "Saber más",
-            "descCaixa1": "Conducimos negocios de manera confiable y eficiente, lo que resulta en clientes satisfechos.",
-            "descCaixa2": "Nuestra empresa tiene la certificación ISO 9001:2015 y una larga historia de colaboración con los principales proveedores del mercado",
-            "descCaixa3": "Somos una referencia tanto a nivel nacional como internacional en el mercado de plastificantes y resinas termoplásticas de PVC."
+        "homePage": {
+            "title": "Actuando en el mercado de plastificantes y resinas termoplásticas desde 1989.",
+            "descSecondary": "Pacifico ha estado operando en el mercado nacional durante más de 30 años con la industrialización de compuestos termoplásticos. Desde el principio, siempre hemos priorizado ofrecer el mejor servicio posible a nuestros clientes. En 2019, Pacifico se expandió como distribuidor de productos químicos con el propósito de abastecer el mercado interno con la distribución e importación de plastificantes y resinas termoplásticas.",
+            "button": "Saber más",
+            "descBalloon1": "Conducimos negocios de manera confiable y eficiente, lo que resulta en clientes satisfechos.",
+            "descBalloon2": "Nuestra empresa tiene la certificación ISO 9001:2015 y una larga historia de colaboración con los principales proveedores del mercado",
+            "descBalloon3": "Somos una referencia tanto a nivel nacional como internacional en el mercado de plastificantes y resinas termoplásticas de PVC."
         },
-        "paginaProdutos": {
-            "descColuna1": "NOMBRE",
-            "descColuna2": "NOMBRE QUÍMICO",
-            "descColuna3": "NCM",
+        "productPage": {
+            "descColumn1": "NOMBRE",
+            "descColumn2": "NOMBRE QUÍMICO",
+            "descColumn3": "NCM",
             "productData": "DADOS DO PRODUTO ES",
             "characteristics": "Características zh",
             "type": "TIPO: zh",
             "nameChemical": "NOME QUÍMICO: es",
             "nCas": "Nº CAS: es",
             "aplications": "Aplicações es",
-            "orcamento": {
+            "budget": {
                 "title": "ESPANHOL",
                 "name": "NOMBRE",
                 "secName": "APELLIDO",
@@ -135,41 +135,41 @@
                 "amount": "CANTIDAD"
             }
         },
-        "paginaSobre": {
+        "aboutPage": {
           
         },
-        "paginaContato": {
+        "contactPage": {
             
         }
     },
     {
-        "lingua": "ZH",
-        "srcBandeira": "https://media.discordapp.net/attachments/872565816602792038/1187510793915338904/China.png?ex=6597269c&is=6584b19c&hm=5ed95303a4e72d8932b3a6b3f6f34b50ae345d4f7ce4585634bed7af0ba7fab1&=&format=webp&quality=lossless&width=40&height=28",
-        "navegacao": {
-            "txt1": "首页",
-            "txt2": "产品",
-            "txt3": "关于我们",
-            "txt4": "联系方式"
+        "language": "ZH",
+        "flag": "https://media.discordapp.net/attachments/872565816602792038/1187510793915338904/China.png?ex=6597269c&is=6584b19c&hm=5ed95303a4e72d8932b3a6b3f6f34b50ae345d4f7ce4585634bed7af0ba7fab1&=&format=webp&quality=lossless&width=40&height=28",
+        "navigation": {
+            "homeButton": "首页",
+            "productsButton": "产品",
+            "aboutButton": "关于我们",
+            "contactButton": "联系方式"
         },        
-        "paginaInicial": {
-            "tituloInicial": "自1989年以来，在增塑剂和热塑性树脂市场上运营。",
-            "descSecundaria": "太平洋公司在国内市场上已经运营了30多年，从事热塑性化合物的工业化。从一开始，我们就一直优先考虑为我们的客户提供最好的服务。2019年，太平洋公司扩展为化学产品的分销商，目的是通过分销和进口增塑剂和热塑性树脂来满足国内市场的需求。",
-            "btn1": "了解更多",
-            "descCaixa1": "我们以可靠和高效的方式进行业务，使客户满意。",
-            "descCaixa2": "我们的公司拥有ISO 9001:2015认证，并与市场上的主要供应商有着长期的合作历史",
-            "descCaixa3": "我们在PVC增塑剂和热塑性树脂市场上是国内外的参考。"
+        "homePage": {
+            "title": "自1989年以来，在增塑剂和热塑性树脂市场上运营。",
+            "descSecondary": "太平洋公司在国内市场上已经运营了30多年，从事热塑性化合物的工业化。从一开始，我们就一直优先考虑为我们的客户提供最好的服务。2019年，太平洋公司扩展为化学产品的分销商，目的是通过分销和进口增塑剂和热塑性树脂来满足国内市场的需求。",
+            "button": "了解更多",
+            "descBalloon1": "我们以可靠和高效的方式进行业务，使客户满意。",
+            "descBalloon2": "我们的公司拥有ISO 9001:2015认证，并与市场上的主要供应商有着长期的合作历史",
+            "descBalloon3": "我们在PVC增塑剂和热塑性树脂市场上是国内外的参考。"
         },
-        "paginaProdutos": {
-            "descColuna1": "名字",
-            "descColuna2": "化学名",
-            "descColuna3": "NCM",
+        "productPage": {
+            "descColumn1": "名字",
+            "descColumn2": "化学名",
+            "descColumn3": "NCM",
             "productData": "DADOS DO PRODUTO ZH",
             "characteristics": "Características zg",
             "type": "TIPO: zg",
             "nameChemical": "NOME QUÍMICO: zg",
             "nCas": "Nº CAS: zg",
             "aplications": "Aplicações zg",
-            "orcamento": {
+            "budget": {
                 "title": "X",
                 "name": "名字",
                 "secName": "姓",
@@ -178,10 +178,10 @@
                 "amount": "数量"
             }
         },
-        "paginaSobre": {
+        "aboutPage": {
           
         },
-        "paginaContato": {
+        "contactPage": {
             
         }
     }

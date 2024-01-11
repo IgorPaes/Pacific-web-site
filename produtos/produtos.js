@@ -103,7 +103,7 @@ function nova() {
     .then(blocoLinguas => {
         // SEPARA AS LINGUAS NO JSON
         blocoLinguas.forEach((caixaLingua) => {
-            switch(caixaLingua.lingua) {
+            switch(caixaLingua.language) {
                 case 'PT-BR':
                     pt_br = caixaLingua;
                 break;
@@ -132,7 +132,7 @@ async function carregaMaisInfos(nome, dados, nomeCompleto, nomeQuimico, nCas, ap
     const blocoLinguas = await response.json();
 
     blocoLinguas.forEach((caixaLingua) => {
-        switch(caixaLingua.lingua) {
+        switch(caixaLingua.language) {
             case 'PT-BR':
                 pt_br = caixaLingua;
             break;
@@ -150,7 +150,7 @@ async function carregaMaisInfos(nome, dados, nomeCompleto, nomeQuimico, nCas, ap
 
     switch(localStorage.getItem('lang')) {
         case 'PT-BR':
-            let lang_pt = pt_br.paginaProdutos;
+            let lang_pt = pt_br.productPage;
             productDataTitle = lang_pt.productData;
             characteristicsTitle = lang_pt.characteristics;
             typeTitle = lang_pt.type;
@@ -159,7 +159,7 @@ async function carregaMaisInfos(nome, dados, nomeCompleto, nomeQuimico, nCas, ap
             aplicationsTitle = lang_pt.aplications;
             return carregaMaisInfos2(nome, dados, nomeCompleto, nomeQuimico, nCas, aplicacoes, productDataTitle, characteristicsTitle, typeTitle, nameChemicalTitle, nCasTitle, aplicationsTitle)
         case 'EN':
-            const lang_en = en.paginaProdutos;
+            const lang_en = en.productPage;
             productDataTitle = lang_en.productData;
             characteristicsTitle = lang_en.characteristics;
             typeTitle = lang_en.type;
@@ -168,7 +168,7 @@ async function carregaMaisInfos(nome, dados, nomeCompleto, nomeQuimico, nCas, ap
             aplicationsTitle = lang_en.aplications;
             return carregaMaisInfos2(nome, dados, nomeCompleto, nomeQuimico, nCas, aplicacoes, productDataTitle, characteristicsTitle, typeTitle, nameChemicalTitle, nCasTitle, aplicationsTitle)
         case 'ES':
-            const lang_es = es.paginaProdutos;
+            const lang_es = es.productPage;
             productDataTitle = lang_es.productData;
             characteristicsTitle = lang_es.characteristics;
             typeTitle = lang_es.type;
@@ -177,7 +177,7 @@ async function carregaMaisInfos(nome, dados, nomeCompleto, nomeQuimico, nCas, ap
             aplicationsTitle = lang_es.aplications;
             return carregaMaisInfos2(nome, dados, nomeCompleto, nomeQuimico, nCas, aplicacoes, productDataTitle, characteristicsTitle, typeTitle, nameChemicalTitle, nCasTitle, aplicationsTitle)
         case 'ZH':
-            const lang_zh = zh.paginaProdutos;
+            const lang_zh = zh.productPage;
             productDataTitle = lang_zh.productData;
             characteristicsTitle = lang_zh.characteristics;
             typeTitle = lang_zh.type;

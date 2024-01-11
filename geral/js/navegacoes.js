@@ -35,12 +35,12 @@ function carregaListaLinguas(blocoLinguas) {
     blocoLinguas.forEach((linguagem) => {
         const nomeLingua = document.querySelector('#ti_select span');
         const bandeira = document.querySelector('#ti_select img');
-        if(localStorage.getItem('lang') != linguagem.lingua) {
-            const blocoLingua = carregaLinguas(linguagem.lingua, linguagem.srcBandeira);
+        if(localStorage.getItem('lang') != linguagem.language) {
+            const blocoLingua = carregaLinguas(linguagem.language, linguagem.flag);
             caixaLinguas.insertAdjacentElement('beforeend', blocoLingua);
             blocoLingua.addEventListener('click', () => {
-                nomeLingua.textContent = linguagem.lingua;
-                bandeira.setAttribute("src", linguagem.srcBandeira);
+                nomeLingua.textContent = linguagem.language;
+                bandeira.setAttribute("src", linguagem.flag);
                 localStorage.setItem('lang', nomeLingua.textContent);
                 caixaLinguas.innerHTML = '';
                 carregaListaLinguas(blocoLinguas);
@@ -48,8 +48,8 @@ function carregaListaLinguas(blocoLinguas) {
                 traducaoPagina();
             });
         }else {
-            nomeLingua.textContent = linguagem.lingua;
-            bandeira.setAttribute("src", linguagem.srcBandeira);
+            nomeLingua.textContent = linguagem.language;
+            bandeira.setAttribute("src", linguagem.flag);
         }
     });
 }
@@ -185,7 +185,7 @@ function selecionaPagina(selecionado) {
 function checkaLinguagemLocal(blocoLinguas) {
     let vecNomeLinguas = [];
     blocoLinguas.forEach((linguagem) => {
-       vecNomeLinguas.push(linguagem.lingua);
+       vecNomeLinguas.push(linguagem.language);
     });
     if(!vecNomeLinguas.includes(localStorage.getItem('lang'))) {
         localStorage.setItem('lang', "PT-BR");
