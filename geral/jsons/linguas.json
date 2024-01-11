@@ -17,7 +17,24 @@
             "descCaixa3": "Somos uma referência tanto nacional quanto internacional no mercado de plastificantes e resinas termoplásticas de PVC."
         },
         "paginaProdutos": {
-           
+            "descColuna1": "NOME",
+            "descColuna2": "NOME QUÍMICO",
+            "descColuna3": "NCM",
+            "productData": "DADOS DO PRODUTO BR",
+            "characteristics": "Características",
+            "type": "TIPO:",
+            "nameChemical": "NOME QUÍMICO:",
+            "nCas": "Nº CAS:",
+            "aplications": "Aplicações",
+            "orcamento": {
+                "title": "ORÇAMENTO",
+                "name": "NOME",
+                "secName": "SOBRENOME",
+                "email": "EMAIL",
+                "tel": "TELEFONE",
+                "amount": "QUANTIDADE"
+
+            }
         },
         "paginaSobre": {
           
@@ -42,9 +59,25 @@
             "descCaixa1": "We conduct business in a reliable and efficient way, resulting in satisfied customers.",
             "descCaixa2": "Our company has ISO 9001:2015 certification and a long history of collaboration with the main suppliers in the market",
             "descCaixa3": "We are a reference both nationally and internationally in the market of plasticizers and PVC thermoplastic resins."
-        },        
+        },
         "paginaProdutos": {
-           
+            "descColuna1": "NAME",
+            "descColuna2": "CHEMICAL NAME",
+            "descColuna3": "NCM",
+            "productData": "DADOS DO PRODUTO EN",
+            "characteristics": "Características es",
+            "type": "TIPO: es",
+            "nameChemical": "NOME QUÍMICO: es",
+            "nCas": "Nº CAS: es",
+            "aplications": "Aplicações es",
+            "orcamento": {
+                "title": "INGLES",
+                "name": "NAME",
+                "secName": "SURNAME",
+                "email": "EMAIL",
+                "tel": "PHONE",
+                "amount": "QUANTITY"
+            }
         },
         "paginaSobre": {
           
@@ -72,7 +105,23 @@
             "descCaixa3": "Somos una referencia tanto a nivel nacional como internacional en el mercado de plastificantes y resinas termoplásticas de PVC."
         },
         "paginaProdutos": {
-           
+            "descColuna1": "NOMBRE",
+            "descColuna2": "NOMBRE QUÍMICO",
+            "descColuna3": "NCM",
+            "productData": "DADOS DO PRODUTO ES",
+            "characteristics": "Características zh",
+            "type": "TIPO: zh",
+            "nameChemical": "NOME QUÍMICO: es",
+            "nCas": "Nº CAS: es",
+            "aplications": "Aplicações es",
+            "orcamento": {
+                "title": "ESPANHOL",
+                "name": "NOMBRE",
+                "secName": "APELLIDO",
+                "email": "CORREO ELECTRÓNICO",
+                "tel": "TELÉFONO",
+                "amount": "CANTIDAD"
+            }
         },
         "paginaSobre": {
           
@@ -99,7 +148,23 @@
             "descCaixa3": "我们在PVC增塑剂和热塑性树脂市场上是国内外的参考。"
         },
         "paginaProdutos": {
-
+            "descColuna1": "名字",
+            "descColuna2": "化学名",
+            "descColuna3": "NCM",
+            "productData": "DADOS DO PRODUTO ZH",
+            "characteristics": "Características zg",
+            "type": "TIPO: zg",
+            "nameChemical": "NOME QUÍMICO: zg",
+            "nCas": "Nº CAS: zg",
+            "aplications": "Aplicações zg",
+            "orcamento": {
+                "title": "X",
+                "name": "名字",
+                "secName": "姓",
+                "email": "电子邮件",
+                "tel": "电话",
+                "amount": "数量"
+            }
         },
         "paginaSobre": {
           

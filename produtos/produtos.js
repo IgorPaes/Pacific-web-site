@@ -96,34 +96,127 @@ function carregaListaProdutos(nome, nomeQuimico, ncm) {
     return engloba.firstElementChild;
 }
 
+function nova() {
+    let pt_br, en, es, zh;
+    fetch('../geral/jsons/linguas.json')
+    .then(response => response.json())
+    .then(blocoLinguas => {
+        // SEPARA AS LINGUAS NO JSON
+        blocoLinguas.forEach((caixaLingua) => {
+            switch(caixaLingua.lingua) {
+                case 'PT-BR':
+                    pt_br = caixaLingua;
+                break;
+                case 'EN':
+                    en = caixaLingua;
+                break;
+                case 'ES':
+                    es = caixaLingua;
+                break;
+                case 'ZH':
+                    zh = caixaLingua;
+                break;
+            }
+        })
+
+        return pt_br, en, es, zh;
+
+    }).catch(error => console.error('Erro:', error));
+}
+
+async function carregaMaisInfos(nome, dados, nomeCompleto, nomeQuimico, nCas, aplicacoes) {
+    let pt_br, en, es, zh;
+    let productDataTitle, characteristicsTitle, typeTitle, nameChemicalTitle, nCasTitle, aplicationsTitle;
+
+    const response = await fetch('../geral/jsons/linguas.json');
+    const blocoLinguas = await response.json();
+
+    blocoLinguas.forEach((caixaLingua) => {
+        switch(caixaLingua.lingua) {
+            case 'PT-BR':
+                pt_br = caixaLingua;
+            break;
+            case 'EN':
+                en = caixaLingua;
+            break;
+            case 'ES':
+                es = caixaLingua;
+            break;
+            case 'ZH':
+                zh = caixaLingua;
+            break;
+        }
+    })
+
+    switch(localStorage.getItem('lang')) {
+        case 'PT-BR':
+            let lang_pt = pt_br.paginaProdutos;
+            productDataTitle = lang_pt.productData;
+            characteristicsTitle = lang_pt.characteristics;
+            typeTitle = lang_pt.type;
+            nameChemicalTitle = lang_pt.nameChemical;
+            nCasTitle = lang_pt.nCas;
+            aplicationsTitle = lang_pt.aplications;
+            return carregaMaisInfos2(nome, dados, nomeCompleto, nomeQuimico, nCas, aplicacoes, productDataTitle, characteristicsTitle, typeTitle, nameChemicalTitle, nCasTitle, aplicationsTitle)
+        case 'EN':
+            const lang_en = en.paginaProdutos;
+            productDataTitle = lang_en.productData;
+            characteristicsTitle = lang_en.characteristics;
+            typeTitle = lang_en.type;
+            nameChemicalTitle = lang_en.nameChemical;
+            nCasTitle = lang_en.nCas;
+            aplicationsTitle = lang_en.aplications;
+            return carregaMaisInfos2(nome, dados, nomeCompleto, nomeQuimico, nCas, aplicacoes, productDataTitle, characteristicsTitle, typeTitle, nameChemicalTitle, nCasTitle, aplicationsTitle)
+        case 'ES':
+            const lang_es = es.paginaProdutos;
+            productDataTitle = lang_es.productData;
+            characteristicsTitle = lang_es.characteristics;
+            typeTitle = lang_es.type;
+            nameChemicalTitle = lang_es.nameChemical;
+            nCasTitle = lang_es.nCas;
+            aplicationsTitle = lang_es.aplications;
+            return carregaMaisInfos2(nome, dados, nomeCompleto, nomeQuimico, nCas, aplicacoes, productDataTitle, characteristicsTitle, typeTitle, nameChemicalTitle, nCasTitle, aplicationsTitle)
+        case 'ZH':
+            const lang_zh = zh.paginaProdutos;
+            productDataTitle = lang_zh.productData;
+            characteristicsTitle = lang_zh.characteristics;
+            typeTitle = lang_zh.type;
+            nameChemicalTitle = lang_zh.nameChemical;
+            nCasTitle = lang_zh.nCas;
+            aplicationsTitle = lang_zh.aplications;
+            return carregaMaisInfos2(nome, dados, nomeCompleto, nomeQuimico, nCas, aplicacoes, productDataTitle, characteristicsTitle, typeTitle, nameChemicalTitle, nCasTitle, aplicationsTitle)
+    }
+}
+
 // VER MAIS DE CADA PRODUTO
-function carregaMaisInfos(nome, dados, nomeCompleto, nomeQuimico, nCas, aplicacoes) {
+function carregaMaisInfos2(nome, dados, nomeCompleto, nomeQuimico, nCas, aplicacoes, productDataTitle, characteristicsTitle, typeTitle, nameChemicalTitle, nCasTitle, aplicationsTitle) {
     let engloba = document.createElement("div");
     engloba.innerHTML = `
     <div>
         <h1>${nome}</h1>
     </div>
     <div>
-        <h2>DADOS DO PRODUTO</h2>
+        <h2>${productDataTitle}</h2>
         <p>${dados}</p>
     </div>
     <div>
-        <h2>Características</h2>
-        <p><span>TIPO: </span>${nomeCompleto} (${nome})</p>
-        <p><span>NOME QUÍMICO: </span>${nomeQuimico}</p>
-        <p><span>Nº CAS: </span>${nCas}</p>
+        <h2>${characteristicsTitle}</h2>
+        <p><span>${typeTitle} </span>${nomeCompleto} (${nome})</p>
+        <p><span>${nameChemicalTitle} </span>${nomeQuimico}</p>
+        <p><span>${nCasTitle} </span>${nCas}</p>
     </div>
     <div>
-        <h2>Aplicações</h2>
+        <h2>${aplicationsTitle}</h2>
         <p>${aplicacoes}</p>
     </div>
     `
+
     return engloba.children;
 }
 
-function carregaVerMais(produto) {
+async function carregaVerMais(produto) {
     const infosProduto = produto.verMais;
-    const blocoInfosProd = carregaMaisInfos(produto.nome, infosProduto.dados, infosProduto.nomeCompleto, produto.nomeQuimico, infosProduto.nCas, infosProduto.aplicacoes);
+    const blocoInfosProd = await carregaMaisInfos(produto.nome, infosProduto.dados, infosProduto.nomeCompleto, produto.nomeQuimico, infosProduto.nCas, infosProduto.aplicacoes);
     document.querySelector(".category_product_block").style = "display: none";
     document.querySelector(".block_see_more").style = "display: block";
     const blocoInfos = document.querySelector(".block_see_more .see_more_background");

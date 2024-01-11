@@ -57,27 +57,42 @@ function inicial(linhasLingua) {
     document.querySelector('.main_title h1').textContent = pi.tituloInicial;
     document.querySelector('.main_informations p').textContent = pi.descSecundaria;
     document.querySelector('.main_informations button').textContent = pi.btn1;
+    document.querySelector('.info_balloon #descCaixa1').textContent = pi.descCaixa1;
+    document.querySelector('.info_balloon #descCaixa2').textContent = pi.descCaixa2;
+    document.querySelector('.info_balloon #descCaixa3').textContent = pi.descCaixa3;
+    
 }
 
 function produtos(linhasLingua) {
     navs(linhasLingua);
-    const pp = linhasLingua.paginaInicial;
+    const pp = linhasLingua.paginaProdutos;
 
-    document.querySelector('.main_title h1').textContent = pp.tituloInicial;
-    document.querySelector('.main_informations p').textContent = pp.descSecundaria;
-    document.querySelector('.main_informations button').textContent = pp.btn1;
+    document.querySelector('.columns_titles #descColuna1').textContent = pp.descColuna1;
+    document.querySelector('.columns_titles #descColuna2').textContent = pp.descColuna2;
+    document.querySelector('.columns_titles #descColuna3').textContent = pp.descColuna3;
+    
+    document.querySelector('#productData').textContent = pp.productData;
+
+    //ORÇAMENTO
+    document.querySelector('.budget_block h1').textContent = pp.orcamento.title;
+
+    document.querySelector('.inputs_grid #name').textContent = pp.orcamento.name;
+    document.querySelector('.inputs_grid #secName').textContent = pp.orcamento.secName;
+    document.querySelector('.inputs_grid #email').textContent = pp.orcamento.email;
+    document.querySelector('.budget_form #tel').textContent = pp.orcamento.tel;
+    document.querySelector('.input_block #amount').textContent = pp.orcamento.amount;
 }
 
 function sobre(linhasLingua) {
     navs(linhasLingua);
-    const ps = linhasLingua.paginaInicial;
+    const ps = linhasLingua.paginaSobre;
 
 
 }
 
 function contato(linhasLingua) {
     navs(linhasLingua);
-    const pc = linhasLingua.paginaInicial;
+    const pc = linhasLingua.paginaContato;
     
 
 }
