@@ -39,8 +39,8 @@
         "aboutPage": {
             "logistics": {
                 "title": "Confira abaixo nossa logística de entrega, feita pensando na melhor experiência para o cliente.",
-                "titleSubCategory": "MATERIAL CHEGA AO PORTO BR",
-                "titleSubCategory2": "ENVIO AO CLIENTE BR",
+                "titleSubCategory": "MATERIAL CHEGA AO PORTO",
+                "titleSubCategory2": "ENVIO AO CLIENTE",
                 "descSubCategory": "Quando um material é adquirido de um fornecedor em um país e destinado a um cliente em outro, uma complexa jornada logística se inicia. Após a compra, o fornecedor prepara o envio, embalando o material e providenciando documentação de exportação. O material é despachado, passando por processos alfandegários no país de origem. Utilizando transporte marítimo, segue viagem até o país do cliente. Ao chegar, enfrenta processos de importação, antes de ser entregue pela empresa local ao destino final. Esta jornada envolve coordenação logística e pode enfrentar imprevistos que afetam o prazo de entrega, exigindo soluções rápidas para garantir o sucesso da operação.",
                 "descSubCategory2": "Após a chegada do material em nosso depósito, damos início a uma etapa crucial de organização e preparação para a entrega ao cliente. Os itens são recebidos, verificados quanto à qualidade e quantidade, e armazenados de maneira adequada. Em seguida, é iniciado o processo de separação e embalagem específica para o envio ao cliente. Nossa equipe logística coordena a expedição, garantindo que os produtos sejam encaminhados diretamente ao cliente, respeitando prazos e requisitos acordados. Essa fase envolve cuidados com a segurança do produto, escolha do meio de transporte mais adequado e ações eficientes para assegurar a entrega pontual e satisfatória ao destinatário final. Nosso objetivo é garantir uma transição fluida do depósito até o cliente, mantendo a integridade e a qualidade dos produtos durante todo o processo."
             }
@@ -61,23 +61,23 @@
         "homePage": {
             "title": "Operating in the market of plasticizers and thermoplastic resins since 1989.",
             "descSecondary": "Pacifico has been operating in the national market for over 30 years with the industrialization of thermoplastic compounds. From the beginning, we have always prioritized offering the best possible service to our customers. In 2019, Pacifico expanded as a distributor of chemical products with the purpose of supplying the domestic market with the distribution and importation of plasticizers and thermoplastic resins.",
-            "button": "Learn More",
             "descBalloon1": "We conduct business in a reliable and efficient way, resulting in satisfied customers.",
             "descBalloon2": "Our company has ISO 9001:2015 certification and a long history of collaboration with the main suppliers in the market",
-            "descBalloon3": "We are a reference both nationally and internationally in the market of plasticizers and PVC thermoplastic resins."
+            "descBalloon3": "We are a reference both nationally and internationally in the market of plasticizers and thermoplastic resins of PVC.",
+            "button": "Learn More"
         },
         "productPage": {
             "descColumn1": "NAME",
             "descColumn2": "CHEMICAL NAME",
             "descColumn3": "NCM",
-            "productData": "DADOS DO PRODUTO EN",
-            "characteristics": "Características es",
-            "type": "TIPO: es",
-            "nameChemical": "NOME QUÍMICO: es",
-            "nCas": "Nº CAS: es",
-            "aplications": "Aplicações es",
+            "productData": "PRODUCT DATA",
+            "characteristics": "Characteristics",
+            "type": "TYPE:",
+            "nameChemical": "CHEMICAL NAME:",
+            "nCas": "CAS No:",
+            "aplications": "Applications",
             "budget": {
-                "title": "INGLES",
+                "title": "BUDGET",
                 "name": "NAME",
                 "secName": "SURNAME",
                 "email": "EMAIL",
@@ -87,11 +87,11 @@
         },
         "aboutPage": {
             "logistics": {
-                "title": "Confira abaixo nossa logística de entrega, feita pensando na melhor experiência para o cliente EN .",
-                "titleSubCategory": "MATERIAL CHEGA AO PORTO EN",
-                "titleSubCategory2": "ENVIO AO CLIENTE EN",
-                "descSubCategory": "teste",
-                "descSubCategory2": "TESTE"
+                "title": "Check out our delivery logistics below, designed for the best customer experience.",
+                "titleSubCategory": "MATERIAL ARRIVES AT THE PORT",
+                "titleSubCategory2": "SHIPMENT TO THE CUSTOMER",
+                "descSubCategory": "When a material is purchased from a supplier in one country and destined for a customer in another, a complex logistical journey begins. After the purchase, the supplier prepares the shipment, packing the material and providing export documentation. The material is dispatched, going through customs processes in the country of origin. Using maritime transport, it travels to the customer's country. Upon arrival, it faces import processes, before being delivered by the local company to the final destination. This journey involves logistical coordination and can face unforeseen events that affect the delivery time, requiring quick solutions to ensure the success of the operation.",
+                "descSubCategory2": "After the material arrives at our warehouse, we start a crucial stage of organization and preparation for delivery to the customer. The items are received, checked for quality and quantity, and stored properly. Then, the process of separation and specific packaging for shipment to the customer begins. Our logistics team coordinates the shipment, ensuring that the products are sent directly to the customer, respecting agreed deadlines and requirements. This phase involves care with the safety of the product, choice of the most suitable means of transport and efficient actions to ensure timely and satisfactory delivery to the final recipient. Our goal is to ensure a smooth transition from the warehouse to the customer, maintaining the integrity and quality of the products throughout the process."
             }
         },
         "contactPage": {
@@ -110,33 +110,39 @@
         },
         "homePage": {
             "title": "Actuando en el mercado de plastificantes y resinas termoplásticas desde 1989.",
-            "descSecondary": "Pacifico ha estado operando en el mercado nacional durante más de 30 años con la industrialización de compuestos termoplásticos. Desde el principio, siempre hemos priorizado ofrecer el mejor servicio posible a nuestros clientes. En 2019, Pacifico se expandió como distribuidor de productos químicos con el propósito de abastecer el mercado interno con la distribución e importación de plastificantes y resinas termoplásticas.",
-            "button": "Saber más",
+            "descSecondary": "Pacifico ha estado actuando en el mercado nacional durante más de 30 años con la industrialización de compuestos termoplásticos. Desde el principio, siempre hemos priorizado ofrecer el mejor servicio posible a nuestros clientes. En 2019, Pacifico se expandió como distribuidor de productos químicos con el propósito de abastecer el mercado interno con la distribución e importación de plastificantes y resinas termoplásticas.",
             "descBalloon1": "Conducimos negocios de manera confiable y eficiente, lo que resulta en clientes satisfechos.",
-            "descBalloon2": "Nuestra empresa tiene la certificación ISO 9001:2015 y una larga historia de colaboración con los principales proveedores del mercado",
-            "descBalloon3": "Somos una referencia tanto a nivel nacional como internacional en el mercado de plastificantes y resinas termoplásticas de PVC."
+            "descBalloon2": "Nuestra empresa tiene la certificación ISO 9001:2015 y una larga trayectoria de colaboración con los principales proveedores del mercado",
+            "descBalloon3": "Somos una referencia tanto a nivel nacional como internacional en el mercado de plastificantes y resinas termoplásticas de PVC.",
+            "button": "Saber Más"
         },
         "productPage": {
             "descColumn1": "NOMBRE",
             "descColumn2": "NOMBRE QUÍMICO",
             "descColumn3": "NCM",
-            "productData": "DADOS DO PRODUTO ES",
-            "characteristics": "Características zh",
-            "type": "TIPO: zh",
-            "nameChemical": "NOME QUÍMICO: es",
-            "nCas": "Nº CAS: es",
-            "aplications": "Aplicações es",
+            "productData": "DATOS DEL PRODUCTO",
+            "characteristics": "Características",
+            "type": "TIPO:",
+            "nameChemical": "NOMBRE QUÍMICO:",
+            "nCas": "Nº CAS:",
+            "aplications": "Aplicaciones",
             "budget": {
-                "title": "ESPANHOL",
+                "title": "PRESUPUESTO",
                 "name": "NOMBRE",
                 "secName": "APELLIDO",
-                "email": "CORREO ELECTRÓNICO",
+                "email": "EMAIL",
                 "tel": "TELÉFONO",
                 "amount": "CANTIDAD"
             }
         },
         "aboutPage": {
-          
+            "logistics": {
+                "title": "Consulte a continuación nuestra logística de entrega, diseñada para la mejor experiencia del cliente.",
+                "titleSubCategory": "EL MATERIAL LLEGA AL PUERTO",
+                "titleSubCategory2": "ENVÍO AL CLIENTE",
+                "descSubCategory": "Cuando un material es adquirido de un proveedor en un país y destinado a un cliente en otro, comienza un complejo viaje logístico. Después de la compra, el proveedor prepara el envío, empaquetando el material y proporcionando documentación de exportación. El material es despachado, pasando por procesos aduaneros en el país de origen. Utilizando transporte marítimo, viaja hasta el país del cliente. Al llegar, enfrenta procesos de importación, antes de ser entregado por la empresa local al destino final. Este viaje implica coordinación logística y puede enfrentar imprevistos que afectan el plazo de entrega, requiriendo soluciones rápidas para garantizar el éxito de la operación.",
+                "descSubCategory2": "Después de que el material llega a nuestro depósito, comenzamos una etapa crucial de organización y preparación para la entrega al cliente. Los artículos son recibidos, verificados en cuanto a calidad y cantidad, y almacenados de manera adecuada. Luego, se inicia el proceso de separación y embalaje específico para el envío al cliente. Nuestro equipo logístico coordina el envío, asegurando que los productos se envíen directamente al cliente, respetando los plazos y requisitos acordados. Esta fase implica cuidados con la seguridad del producto, elección del medio de transporte más adecuado y acciones eficientes para asegurar la entrega puntual y satisfactoria al destinatario final. Nuestro objetivo es garantizar una transición fluida desde el depósito hasta el cliente, manteniendo la integridad y la calidad de los productos durante todo el proceso."
+            }
         },
         "contactPage": {
             
@@ -149,28 +155,28 @@
             "homeButton": "首页",
             "productsButton": "产品",
             "aboutButton": "关于我们",
-            "contactButton": "联系方式"
-        },        
+            "contactButton": "联系"
+        },
         "homePage": {
-            "title": "自1989年以来，在增塑剂和热塑性树脂市场上运营。",
-            "descSecondary": "太平洋公司在国内市场上已经运营了30多年，从事热塑性化合物的工业化。从一开始，我们就一直优先考虑为我们的客户提供最好的服务。2019年，太平洋公司扩展为化学产品的分销商，目的是通过分销和进口增塑剂和热塑性树脂来满足国内市场的需求。",
-            "button": "了解更多",
+            "title": "自1989年以来在塑化剂和热塑性树脂市场上运营。",
+            "descSecondary": "Pacifico在国内市场上已经运营了30多年，主要从事热塑性化合物的工业化。从一开始，我们就一直优先考虑为我们的客户提供最好的服务。2019年，Pacifico扩展为化学品分销商，目的是通过分销和进口塑化剂和热塑性树脂来满足国内市场的需求。",
             "descBalloon1": "我们以可靠和高效的方式进行业务，使客户满意。",
-            "descBalloon2": "我们的公司拥有ISO 9001:2015认证，并与市场上的主要供应商有着长期的合作历史",
-            "descBalloon3": "我们在PVC增塑剂和热塑性树脂市场上是国内外的参考。"
+            "descBalloon2": "我们的公司拥有ISO 9001:2015认证，并与市场上的主要供应商有着长期的合作关系",
+            "descBalloon3": "我们在PVC塑化剂和热塑性树脂市场上是国内外的参考。",
+            "button": "了解更多"
         },
         "productPage": {
-            "descColumn1": "名字",
-            "descColumn2": "化学名",
+            "descColumn1": "名称",
+            "descColumn2": "化学名称",
             "descColumn3": "NCM",
-            "productData": "DADOS DO PRODUTO ZH",
-            "characteristics": "Características zg",
-            "type": "TIPO: zg",
-            "nameChemical": "NOME QUÍMICO: zg",
-            "nCas": "Nº CAS: zg",
-            "aplications": "Aplicações zg",
+            "productData": "产品数据",
+            "characteristics": "特性",
+            "type": "类型:",
+            "nameChemical": "化学名称:",
+            "nCas": "CAS号:",
+            "aplications": "应用",
             "budget": {
-                "title": "X",
+                "title": "预算",
                 "name": "名字",
                 "secName": "姓",
                 "email": "电子邮件",
@@ -179,7 +185,13 @@
             }
         },
         "aboutPage": {
-          
+            "logistics": {
+                "title": "请查看以下我们的交付物流，为客户提供最佳体验。",
+                "titleSubCategory": "物料到达港口",
+                "titleSubCategory2": "发送给客户",
+                "descSubCategory": "当一个国家的供应商购买了一个物料，并将其发送给另一个国家的客户时，一个复杂的物流旅程就开始了。购买后，供应商准备发货，包装物料并提供出口文件。物料被派送，经过原产国的海关程序。使用海运，它旅行到客户的国家。到达后，它面临进口程序，然后由当地公司交付给最终目的地。这个旅程涉及到物流协调，可能会遇到影响交货时间的意外情况，需要快速的解决方案来确保操作的成功。",
+                "descSubCategory2": "物料到达我们的仓库后，我们开始了一个关键的组织和准备向客户交付的阶段。接收到的物品经过质量和数量的检查，然后以适当的方式存储。然后，开始将物品分离和特定的包装，以便向客户发送。我们的物流团队协调发货，确保产品直接发送给客户，遵守约定的期限和要求。这个阶段涉及到对产品安全的关注，选择最合适的运输方式和有效的行动，以确保向最终收件人准时和满意地交付。我们的目标是确保从仓库到客户的流畅过渡，在整个过程中保持产品的完整性和质量。"
+            }
         },
         "contactPage": {
             
