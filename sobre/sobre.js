@@ -1,28 +1,27 @@
 import navegacoes from '../geral/js/navegacoes.js';
 navegacoes(3);
 
-
-for (let index = 0; index < 4; index++) {        
+const blocosSobre = document.querySelectorAll('.categorys_block .item_block');
+blocosSobre.forEach((bloco, i) => {
     const btnsSaibaMais = document.querySelectorAll('#learn_more');
-    btnsSaibaMais[index].addEventListener('click', () => { 
-        ativaDesativaTelas(index + 1);
+    btnsSaibaMais[i].addEventListener('click', () => { 
+        ativaDesativaTelas(bloco.id);
     });
-}
+});
 
-
-function ativaDesativaTelas(numeroTela) {
+function ativaDesativaTelas(idBloco) {
     document.querySelector(".main_container .categorys_block").style = "display: none";
-    switch(numeroTela) {
-        case 1:
+    switch(idBloco) {
+        case 'empresa':
             document.querySelector("").style = "";
         break;
-        case 2:
+        case 'logistica':
             document.querySelector("#logistics").style = "";
         break;
-        case 3:
+        case 'localizacao':
             document.querySelector("#location").style = "";
         break;
-        case 4:
+        case 'politicas':
             document.querySelector("").style = "";
         break;
     }
