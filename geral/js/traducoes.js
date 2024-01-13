@@ -73,9 +73,9 @@ function produtos(linhasLingua) {
     
     document.querySelector('#productData').textContent = pp.productData;
 
-    //ORÇAMENTO
+    // ORÇAMENTO
     document.querySelector('.budget_block h1').textContent = pp.budget.title;
-
+    
     document.querySelector('.inputs_grid #name').textContent = pp.budget.name;
     document.querySelector('.inputs_grid #secName').textContent = pp.budget.secName;
     document.querySelector('.inputs_grid #email').textContent = pp.budget.email;
@@ -87,7 +87,7 @@ function sobre(linhasLingua) {
     navs(linhasLingua);
     const ps = linhasLingua.aboutPage;
 
-    //LOGISTICA
+    // LOGÍSTICA
     document.querySelector('.main_title_box h1').textContent = ps.logistics.title;
     document.querySelector('.step_content #titleSubCategory1').textContent = ps.logistics.titleSubCategory;
     document.querySelector('.step_content #pSubCategory1').textContent = ps.logistics.descSubCategory;
@@ -101,7 +101,7 @@ function contato(linhasLingua) {
     navs(linhasLingua);
     const pc = linhasLingua.contactPage;
     
-
+    
 }
 
 function navs(linhasLingua) {

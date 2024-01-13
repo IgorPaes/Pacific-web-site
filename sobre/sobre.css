@@ -110,7 +110,7 @@
 
 }
 
-/* ---------- LOGISTICA ---------- */
+/* ---------- PADRÃO CATEGORIAS ---------- */
 
 .main_title_box {
 
@@ -119,7 +119,6 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    padding: 23.13rem 1rem 0 1rem;
 
 }
 
@@ -157,18 +156,32 @@
 
 }
 
-.steps_box {
+.back_box {
 
     display: grid;
     gap: 13.5rem;
     padding: 17.62rem 2.5rem 17.56rem 2.5rem;
+    border-radius: 3.125rem 3.125rem 0 0;
     background-color: var(--cor-branca-padrao);
     justify-items: center;
 
 }
 
+/* ---------- LOGÍSTICA ---------- */
 
-.steps_box .step_block {
+#logistics .main_title_box {
+
+    padding: 23.13rem 1rem 0 1rem;
+
+}
+
+#logistics .back_box {
+
+    border-radius: 0;
+
+}
+
+.back_box .step_block {
 
     display: flex;
     align-items: center;
@@ -178,7 +191,7 @@
 
 }
 
-.steps_box .step_block .circle_number_step {
+.back_box .step_block .circle_number_step {
 
     display: flex;
     align-items: center;
@@ -192,7 +205,7 @@
 
 }
 
-.steps_box .step_block .circle_number_step span {
+.back_box .step_block .circle_number_step span {
 
     color: transparent;
     text-align: center;
@@ -203,7 +216,7 @@
 
 }
 
-.steps_box .step_block .step_content h2 {
+.back_box .step_block .step_content h2 {
 
     font-size: 4.0625rem;
     font-weight: 900;
@@ -213,7 +226,7 @@
 
 }
 
-.steps_box .step_block .step_content p {
+.back_box .step_block .step_content p {
 
     font-size: 1.25rem;
     font-weight: 500;
@@ -222,5 +235,76 @@
 
 }
 
-/* -------------------------------- */
+/* ---------- LOCALIZAÇÃO ---------- */
 
+#location .main_title_box {
+
+    padding: 21.25rem 1rem 14.31rem 1rem;
+    background-image: url(../geral/assets/WorldImg.png);
+
+}
+
+#location .back_box {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 10rem 7rem 9.435rem 7rem;
+    gap: 5rem;
+
+}
+
+.back_box .top_location_title {
+
+    margin-bottom: 6.25rem;
+
+}
+
+.back_box .top_location_title h2 {
+
+    font-size: 4.6875rem;
+    font-weight: 700;
+    color: var(--cor-azul-padrao);
+    margin-bottom: 1rem;
+
+}
+
+.back_box .top_location_title p {
+
+    font-size: 1.5625rem;
+    font-weight: 500;
+    color: var(--cor-azul-padrao);
+
+}
+
+.back_box .location_block .location_boxes {
+
+    display: grid;
+    gap: 6.25rem;
+
+}
+
+.location_block .location_boxes .location_desc {
+
+    max-width: 43.25rem;
+
+}
+
+.location_boxes .location_desc > * {
+
+    display: flex;
+    font-size: 1.875rem;
+    color: var(--cor-azul-padrao);
+
+}
+
+.location_boxes .location_desc h3 {
+
+    font-weight: 700;
+
+}
+
+.location_boxes .location_desc span {
+
+    font-weight: 500;
+
+}

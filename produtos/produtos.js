@@ -150,7 +150,7 @@ async function carregaMaisInfos(nome, dados, nomeCompleto, nomeQuimico, nCas, ap
 
     switch(localStorage.getItem('lang')) {
         case 'PT-BR':
-            let lang_pt = pt_br.productPage;
+            const lang_pt = pt_br.productPage;
             productDataTitle = lang_pt.productData;
             characteristicsTitle = lang_pt.characteristics;
             typeTitle = lang_pt.type;
