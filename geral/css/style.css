@@ -330,6 +330,8 @@ ul {
 .footer_container .footer_nav {
 
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.75rem;
 
 }

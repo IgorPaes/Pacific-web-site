@@ -17,9 +17,13 @@
 
 .categorys_block .item_block {
 
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     width: 23%;
     min-width: max-content;
     height: min-content;
+    min-height: 32.3rem;
     background-color: var(--cor-azul-claro);
     box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, .25);
     padding: 0 1.56rem 1.56rem 1.56rem;
