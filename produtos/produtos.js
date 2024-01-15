@@ -226,21 +226,14 @@ async function carregaVerMais(produto) {
     }
 }
 
-
 document.querySelector('.btn_form_box button').addEventListener('click', () => {
-
     const nome = document.querySelector('.input_block #name');
     const secName = document.querySelector('.input_block #secName');
-    const email = document.querySelector('.input_block #email');
-    const telefone = document.querySelector('.input_block #tel');
-    const produto = document.querySelector('.input_block #amount');
-    const quantidade = document.querySelector('.input_block #product');
+    const company = document.querySelector('.input_block #company');
 
-    nome.value = '';
-    secName.value = '';
-    email.value = '';
-    telefone.value = '';
-    produto.value = '';
-    quantidade.value = '';
-
+    if (!nome.value || !secName.value || !company.value)
+        window.open(`https://wa.me/5511910014777`, '_blank');
+    
+    if (nome.value || secName.value || company.value)
+        window.open(`https://wa.me//5511910014777?text=Olá,%20sou%20${nome.value}%20${secName.value},%20da%20empresa%20${company.value},%20e%20gostaria%20de%20fazer%20um%20orçamento.`, '_blank');
 });
