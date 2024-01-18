@@ -481,6 +481,13 @@
     
 }
 
+.budget_block .budget_form .input_block input::placeholder {
+
+    font-weight: 400;
+    color: rgba(180, 180, 180, 0.85);
+    
+}
+
 .budget_block .budget_form .btn_form_box {
 
     display: flex;

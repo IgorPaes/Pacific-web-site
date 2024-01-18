@@ -233,11 +233,11 @@ document.querySelector('.btn_form_box button').addEventListener('click', () => {
     const vecCampos = [nome, secName, company];
 
     if(validaInputs(vecCampos)) {
-        if(!nome.value || !secName.value || !company.value)
-            window.open(`https://wa.me/5511910014777`, '_blank');
-        
-        if(nome.value || secName.value || company.value)
-            window.open(`https://wa.me//5511910014777?text=Olá,%20sou%20${nome.value}%20${secName.value},%20da%20empresa%20${company.value},%20e%20gostaria%20de%20fazer%20um%20orçamento.`, '_blank');
+        window.open(`https://wa.me//5511910014777?text=Olá,%20sou%20${nome.value}%20${secName.value},%20da%20empresa%20${company.value},%20e%20gostaria%20de%20fazer%20um%20orçamento.`, '_blank');
+    }else {
+        nome.placeholder = "Preencha o campo.";
+        secName.placeholder = "Preencha o campo.";
+        company.placeholder = "Preencha o campo.";
     }
 });
 
