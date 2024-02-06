@@ -312,3 +312,71 @@
     font-weight: 500;
 
 }
+
+/* ---------- POLÍTICAS ---------- */
+
+#policies .main_title_box {
+
+    padding: 21.25rem 1rem 11.438rem 1rem;
+
+}
+
+#policies .main_title_box h1 {
+
+    max-width: 85.72rem;
+
+}
+
+.policies_description {
+
+    color: var(--cor-azul-padrao);
+    padding: 6.063rem 3.75rem 9.813rem 3.75rem;
+    gap: 0;
+
+}
+
+.policies_description h1 {
+
+    width: 100%;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 4.688rem;
+
+}
+
+.policies_description > div {
+
+    display: grid;
+    gap: 1.65rem;
+    margin-bottom: 1.8rem;
+    width: 100%;
+
+}
+
+.policies_description p {
+
+    font-size: 1.563rem;
+    font-weight: 500;
+
+}
+
+.policies_description h2 {
+
+    font-size: 2.188rem;
+    font-weight: 800;
+
+}
+
+.policies_description h3 {
+
+    font-size: 1.563rem;
+    font-weight: 700;
+
+}
+
+.policies_description .mb h3 {
+
+    margin-bottom: 1.1rem;
+
+}

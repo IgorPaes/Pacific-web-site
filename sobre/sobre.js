@@ -22,7 +22,7 @@ function ativaDesativaTelas(idBloco) {
             document.querySelector("#location").style = "";
         break;
         case 'politicas':
-            document.querySelector("").style = "";
+            document.querySelector("#policies").style = "";
         break;
     }
 }
