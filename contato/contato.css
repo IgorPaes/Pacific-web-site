@@ -1,6 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;700;800&display=swap');
 
+/* ------------ BLOCO INICIAL ------------ */
+
+.main_container .contact_infos_block {
+
+    width: 100%;
+    padding: 13.94rem 12.5rem 16.5rem 16.94rem;
+
+}
+
+.main_container .contact_infos_block .contact_title {
+
+    width: 100%;
+    text-align: center;
+    margin-bottom: 6.5rem;
+
+}
+
+.contact_infos_block .contact_title h1 {
+
+    font-size: 6.25rem;
+    font-weight: 800;
+
+}
+
+.contact_infos_block .infos_box {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    column-gap: 8rem;
+    row-gap: 4.56rem;
+
+}
+
+.contact_infos_block .infos_box .info_block {
+
+    display: flex;
+    flex-direction: column;
+    max-width: 43.19rem;
+    gap: 6px;
+
+}
+
+.infos_box .info_block h3 {
+
+    font-size: 2.5rem;
+    font-weight: 800;
+
+}
+
+.infos_box .info_block span {
+
+    font-size: 1.875rem;
+    font-weight: 500;
+
+}
+
+/* ------------ BLOCO DO FORMULÁRIO ------------ */
 
 
 
 /* ------------------------------------------------ */
+
+@media (max-width: 1695px) {
+
+    .contact_infos_block .infos_box {
+
+        justify-content: center;
+
+    }
+
+    .contact_infos_block .infos_box .info_block {
+
+        text-align: center;
+
+    }
+
+}
