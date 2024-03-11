@@ -28,7 +28,7 @@ function carregaBlocoCategoria(imgSrc, titulo, desc) {
     <div class="item_block">
         <div class="product_imagem_block">
             <figure>
-                <img src="${imgSrc}" alt="Imagem do produto">
+                <img src="${imgSrc}" alt="Imagem da categoria do produto">
             </figure>
         </div>
         <div class="product_description">

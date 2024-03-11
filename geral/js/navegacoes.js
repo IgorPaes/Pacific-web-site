@@ -96,7 +96,7 @@ function navSuperior() {
         <div class="language_bar">
             <div class="select_block" id="drop_block">
                 <div class="icone_txt_select" id="ti_select">
-                    <img src="">
+                    <img src="../assets/flags/br.png">
                     <span></span>
                 </div>
                 <div class="icon_box" id="icon_box_id">

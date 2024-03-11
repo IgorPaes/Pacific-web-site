@@ -236,17 +236,19 @@
 
 .itens_main_table .rows_boxs li span {
 
+    display: inline-grid;
+    align-items: center;
     font-weight: 700;
     letter-spacing: .39063rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    /* overflow: hidden;
+    text-overflow: ellipsis; */
 
 }
 
 .itens_main_table .rows_boxs li span:first-child {
 
-    letter-spacing: .74219rem;
+    letter-spacing: .6rem;
 
 }
 
@@ -515,5 +517,48 @@
 .budget_block .budget_form .btn_form_box button:hover {
 
     letter-spacing: .4rem;
+
+}
+
+/* ------------------------------------------------ */
+
+@media (max-width: 1520px) {
+    
+    .itens_main_table .rows_boxs li span {
+
+        font-size: .9375rem;
+
+    }
+
+    .itens_main_table .rows_boxs li span:first-child {
+
+        font-size: 1.25rem;
+
+    }
+
+    .itens_main_table .columns_titles span:last-child {
+
+        margin-left: 1rem;
+
+    }
+
+    .itens_main_table .rows_boxs li button {
+
+        min-width: 9.25rem;
+        margin-left: 1.74rem;
+
+    }
+
+    .main_container .budget_block .budget_form .inputs_grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    
+    }
+
+    .main_container .budget_block .budget_form .inputs_grid .input_block:last-child {
+
+        grid-column: span 2;
+    
+    }
 
 }
