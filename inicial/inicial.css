@@ -135,8 +135,8 @@
 .general_informations_block {
 
     display: flex;
-    width: 100%;
     /* gap: 8.7rem; */
+    width: 100%;
     gap: 8.5%;
     background-color: var(--cor-branca-padrao);
     border-radius: 3.125rem;

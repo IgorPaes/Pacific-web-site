@@ -5,7 +5,7 @@
 .main_container .contact_infos_block {
 
     width: 100%;
-    padding: 13.94rem 12.5rem 16.5rem 16.94rem;
+    padding: 13.94rem 12.5rem 13.38rem 16.94rem;
 
 }
 
@@ -60,7 +60,32 @@
 
 /* ------------ BLOCO DO FORMULÁRIO ------------ */
 
+.main_container .back_box {
 
+    display: grid;
+    gap: 5.63rem;
+    padding: 6.5rem 2.5rem 15.815rem 2.5rem;
+    border-radius: 3.125rem 3.125rem 0 0;
+    background-color: var(--cor-branca-padrao);
+    justify-items: center;
+
+}
+
+.main_container .back_box .form_title {
+
+    width: 100%;
+    max-width: 39.75rem;
+
+}
+
+.back_box .form_title h1 {
+
+    font-size: 4.375rem;
+    color: var(--cor-azul-padrao);
+    text-align: center;
+    font-weight: 800;
+
+}
 
 /* ------------------------------------------------ */
 
