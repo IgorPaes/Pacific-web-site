@@ -1,8 +1,8 @@
 [
     {
         "ativoInicial": true,
-        "srcImagemInicial": "",
-        "srcImagemPadrao": "",
+        "srcImagemInicial": "../geral/assets/Pacote.png",
+        "srcImagemPadrao": "../geral/assets/imgs-produtos/1.png",
         "titulo": "BARRILHA",
         "descricao": "A barrilha, também conhecida como carbonato de sódio, é um composto...",
         "listaPrdutos": [  
@@ -110,8 +110,8 @@
 
     {
         "ativoInicial": true,
-        "srcImagemInicial": "",
-        "srcImagemPadrao": "",
+        "srcImagemInicial": "../geral/assets/Pacote.png",
+        "srcImagemPadrao": "../geral/assets/imgs-produtos/2.png",
         "titulo": "Bicarbonato de Sódio",
         "descricao": "O bicarbonato de sódio é um composto químico versátil e de ampla utilização...",
         "listaPrdutos": [  

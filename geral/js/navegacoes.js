@@ -73,22 +73,22 @@ function navSuperior() {
             </figure>
             <nav class="top_nav" id="nav_sup">
                 <a href="../inicial/inicial.html">
-                    <button>
+                    <button type="button">
                         <span id="tInicio">Inicio</span>
                     </button>
                 </a>
                 <a href="../produtos/produtos.html">
-                    <button>
+                    <button type="button">
                         <span id="tProdutos">Produtos</span>
                     </button>
                 </a>
                 <a href="../sobre/sobre.html">
-                    <button>
+                    <button type="button">
                         <span id="tSobre">Sobre Nós</span>
                     </button>
                 </a>
                 <a href="../contato/contato.html">
-                    <button class="contact" id="tContato">CONTATO</button>
+                    <button class="contact" id="tContato" type="button">CONTATO</button>
                 </a>
             </nav>
         </div>
@@ -121,16 +121,16 @@ function navInferior() {
         </div>
         <nav class="footer_nav" id="ft_nav">
             <a href="../inicial/inicial.html">
-                <button id="tInicio">INICIO</button>
+                <button id="tInicio" type="button">INICIO</button>
             </a>
             <a href="../produtos/produtos.html">
-                <button id="tProdutos">PRODUTOS</button>
+                <button id="tProdutos" type="button">PRODUTOS</button>
             </a>
             <a href="../sobre/sobre.html">
-                <button id="tSobre">SOBRE NÓS</button>
+                <button id="tSobre" type="button">SOBRE NÓS</button>
             </a>
             <a href="../contato/contato.html">
-                <button id="tContato">CONTATO</button>
+                <button id="tContato" type="button">CONTATO</button>
             </a>
         </nav>
         <div class="est_txt">

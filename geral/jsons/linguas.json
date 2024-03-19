@@ -1,7 +1,7 @@
 [
     {
         "language": "PT-BR",
-        "flag": "",
+        "flag": "../geral/assets/flags/br.png",
         "navigation": {
             "homeButton": "Inicio",
             "productsButton": "Produtos",
@@ -51,7 +51,7 @@
     },
     {
         "language": "EN",
-        "flag": "",
+        "flag": "../geral/assets/flags/us.png",
         "navigation": {
             "homeButton": "Home",
             "productsButton": "Products",
@@ -101,7 +101,7 @@
     },
     {
         "language": "ES",
-        "flag": "",
+        "flag": "../geral/assets/flags/es.png",
         "navigation": {
             "homeButton": "Inicio",
             "productsButton": "Productos",
@@ -150,7 +150,7 @@
     },
     {
         "language": "ZH",
-        "flag": "",
+        "flag": "../geral/assets/flags/cn.png",
         "navigation": {
             "homeButton": "首页",
             "productsButton": "产品",

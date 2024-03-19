@@ -63,11 +63,11 @@
 .main_container .back_box {
 
     display: grid;
+    justify-items: center;
     gap: 5.63rem;
     padding: 6.5rem 2.5rem 15.815rem 2.5rem;
     border-radius: 3.125rem 3.125rem 0 0;
     background-color: var(--cor-branca-padrao);
-    justify-items: center;
 
 }
 
@@ -84,6 +84,75 @@
     color: var(--cor-azul-padrao);
     text-align: center;
     font-weight: 800;
+
+}
+
+.back_box .form_block {
+
+    display: grid;
+    gap: 2.73rem;
+    width: 100%;
+    max-width: 60.91481rem;
+
+}
+
+.form_block .input_standard label {
+
+    font-size: 1.5625rem;
+    font-weight: 700;
+    letter-spacing: .15625rem;
+    color: var(--cor-azul-claro);
+    text-transform: uppercase;
+
+}
+
+.form_block .input_standard input, .form_block .input_standard textarea {
+
+    width: 100%;
+    height: 6.43081rem;
+    background: rgba(216, 216, 216, .25);
+    border-top: 2px solid rgba(255, 255, 255, .05);
+    border-left: 2px solid rgba(255, 255, 255, .05);
+    border-radius: .3125rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--cor-azul-padrao);
+    margin-top: 1.33rem;
+    padding: 0 1.5rem;
+
+}
+
+.form_block .input_standard textarea {
+
+    padding: 1.2rem 1.5rem;
+    height: 28.72881rem;
+    word-break: break-all;
+
+}
+
+.back_box .form_block button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3.28531rem;
+    background: var(--cor-azul-padrao);
+    border-top: 2px solid rgba(255, 255, 255, .05);
+    border-left: 2px solid rgba(255, 255, 255, .05);
+    border-radius: .3125rem;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, .15);
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    transition: var(--tempo-transicao-padrao);
+
+}
+
+.back_box .form_block button:hover {
+
+    letter-spacing: .5rem;
 
 }
 
