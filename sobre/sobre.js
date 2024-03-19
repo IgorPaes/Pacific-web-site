@@ -13,7 +13,7 @@ function ativaDesativaTelas(idBloco) {
     document.querySelector(".main_container .categorys_block").style = "display: none";
     switch(idBloco) {
         case 'empresa':
-            document.querySelector("").style = "";
+            document.querySelector("#company").style = "";
         break;
         case 'logistica':
             document.querySelector("#logistics").style = "";

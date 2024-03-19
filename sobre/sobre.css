@@ -380,3 +380,100 @@
     margin-bottom: 1.1rem;
 
 }
+
+/* ---------- SOBRE A EMPRESA ---------- */
+
+#company .main_title_box {
+
+    padding: 22.17rem 1rem 14.93rem 1rem;
+    background-image: url(../geral/assets/WorldImg.png);
+
+}
+
+.contact_us_box {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.88rem;
+    width: 100%;
+    background-color: var(--cor-branca-padrao);
+    border-radius: 3.125rem;
+    padding: 5.5rem 1rem;
+
+}
+
+.contact_us_box h2 {
+
+    font-size: 4.6875rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--cor-azul-padrao);
+
+}
+
+.contact_us_box p {
+
+    font-size: 1.875rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--cor-azul-padrao);
+    max-width: 98.1875rem;
+
+}
+
+.contact_us_box .contact_us_btn {
+
+    display: flex;
+    align-items: center;
+    gap: 2.94rem;
+    background-color: var(--cor-azul-escuro);
+    padding: 0 1.75rem 0 6.5rem;
+    height: 3.875rem;
+
+}
+
+.contact_us_box .contact_us_btn span {
+
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: .25rem;
+    text-align: center;
+
+}
+
+.time_line_box  {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 6.62rem 1rem 14rem 1rem;
+
+}
+
+.time_line_box .tl_top {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.56rem;
+    margin-bottom: 7.94rem;
+
+}
+
+.time_line_box .tl_top h3 {
+
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: .125rem;
+    text-align: center;
+
+}
+
+.time_line_box .tl_img img {
+
+    padding-left: 3.6%;
+
+
+}

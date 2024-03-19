@@ -424,6 +424,23 @@ ul {
 
 }
 
+@media (max-width: 905px) {
+
+    .header_container {
+
+        margin-top: 1.5rem;
+
+    }
+
+    .header_container .top_header_box {
+
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+
+    }
+
+}
 /* @media (min-width: 320px) and (max-width: 480px) {
 
 }
